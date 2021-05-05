@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>International Housing Observatory</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="assets/img/iho-logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
+
+    <meta property="og:description" content="">
+    <meta property="og:image" content="assets/img/logo.png">
+
+    <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Load d3.js and c3.js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="assets/css/c3.css">
+    <script src="assets/js/c3.min.js"></script>
+
+
+    <!-- Academic icons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Bootsrap Theme Journal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129604855-5');
+    </script>
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <!-- Start the dashboard silently to reduce the loading time -->
+    <iframe src="https://lancs-macro.shinyapps.io/idash/"
+        style="visibility: hidden;"></iframe>
+
+
+    <div class="jumbotron jumbotron-index jumbotron-fluid">
+        <div class="container col-md-6 col-sm-12">
+        </div>
+    </div>
+
+    <section id="intro" class="text-center">
+        <div class="container">
+            <h1>International Housing Observatory</h1>
+            <h5 class="topics-sub">A project developed to improve understanding of international house price dynamics
+            </h5>
+        </div>
+    </section>
+
+    <section id="c3-chart">
+        <div class="container">
+            <div class="chart-row">
+                <div></div>
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                    onclick="switchVisible();" />
+            </div>
+            <div id="chart"></div>
+            <div id="chart2"></div>
+        </div>
+    </section>
+    <script src="linechart.js"></script>
+    <script src="linechart2.js"></script>
+
+    <section id="c3-chart-mobile">
+        <div class="chart-row">
+            <div></div>
+            <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                onclick="switchVisible();" />
+        </div>
+        <div id="chart-mobile"></div>
+        <div id="chart-mobile2"></div>
+    </section>
+    <script src="linechart-mobile.js"></script>
+    <script src="linechart-mobile2.js"></script>
+
+    <script language="javascript">
+        function switchVisible() {
+            if (document.getElementById('chart')) {
+
+                if (document.getElementById('chart').style.display == 'none') {
+                    document.getElementById('chart').style.display = 'block';
+                    document.getElementById('chart2').style.display = 'none';
+                    document.getElementById("chart-button").value = "Switch: Growth";
+
+                } else {
+                    document.getElementById('chart').style.display = 'none';
+                    document.getElementById('chart2').style.display = 'block';
+                    document.getElementById("chart-button").value = "Switch: Level";
+                }
+            }
+            if (document.getElementById('chart-mobile')) {
+
+                if (document.getElementById('chart-mobile').style.display == 'none') {
+                    document.getElementById('chart-mobile').style.display = 'block';
+                    document.getElementById('chart-mobile2').style.display = 'none';
+                    document.getElementById("chart-button").value = "Switch: Growth";
+
+                } else {
+                    document.getElementById('chart-mobile').style.display = 'none';
+                    document.getElementById('chart-mobile2').style.display = 'block';
+                    document.getElementById("chart-button").value = "Switch: Level";
+                }
+            }
+        }
+    </script>
+
+
+    <section id="topics" class="bg-gray">
+        <div class="container">
+            <div class="card-deck">
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 22rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-home fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Real-time Monitoring</h4>
+                            <p class="card-text">Real Etate Markets</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center" style="width: 20rem;">
+                        <i class="fas fa-globe fa-6x"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">International Coverage</h4>
+                            <p class="card-text"> 24 countries across the world</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center" style="width: 20rem;">
+                        <i class="fas fa-chart-area fa-6x"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Financial Stability</h4>
+                            <p class="card-text">Monitoring Exuberance and Collapses in Housing Markets</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="markets" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="...">
+                    <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="container">
+
+                        <h2>Discover & Interact</h2>
+                        <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
+                        <p>
+                            You will find a comprehensive set of information and interactive tools to perform real-time
+                            monitoring of international real estate markets. This webpage provides an interactive
+                            platform to access these statistics.
+                        </p>
+
+                        <h5 class="text-center">
+
+                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow">
+                                Navigate to Dashboard to find out more !
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+</body>
+
+</html>
