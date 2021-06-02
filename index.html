@@ -82,8 +82,7 @@
     <!--end of Navigation bar-->
 
     <!-- Start the dashboard silently to reduce the loading time -->
-    <iframe src="https://lancs-macro.shinyapps.io/idash/"
-        style="visibility: hidden;"></iframe>
+    <iframe src="https://lancs-macro.shinyapps.io/idash/" class="iframe-hidden"></iframe>
 
 
     <div class="jumbotron jumbotron-index jumbotron-fluid">
@@ -167,7 +166,7 @@
                         <i class="fas fa-home fa-6x"></i>
                         <div class="card-body ">
                             <h4 class="card-title">Real-time Monitoring</h4>
-                            <p class="card-text">Real Etate Markets</p>
+                            <p class="card-text">Real Estate Markets</p>
                         </div>
                     </div>
                 </a>
@@ -176,7 +175,7 @@
                         <i class="fas fa-globe fa-6x"></i>
                         <div class="card-body">
                             <h4 class="card-title">International Coverage</h4>
-                            <p class="card-text"> 24 countries across the world</p>
+                            <p class="card-text"> 25 countries across the world</p>
                         </div>
                     </div>
                 </a>
@@ -197,7 +196,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-7">
-                    <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="...">
+                    <iframe src="https://api.housing-observatory.com/visualizations/int/map" class = "iframe-index" frameborder="0"></iframe>
+                    <!-- <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="..."> -->
                     <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
                 </div>
                 <div class="col-12 col-md-5">
