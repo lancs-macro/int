@@ -347,6 +347,26 @@
     padding-bottom:1rem
 }
 
+/* PSYIVX section */ 
+
+.image {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+}
+
+.image p {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 100%;
+}
+
+.image img:hover {
+     -webkit-filter: brightness(0.5);
+     filter: brightness(0.5);
+}
+
 /*Code section*/
 
 .code-title {

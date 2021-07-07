@@ -185,7 +185,6 @@
                              </div>
                          </div>
                      </div>
-
                  </div>
              </div>
          </section>
@@ -234,25 +233,72 @@
         </section>
 
          <section id="methodology">
-              <h2 class="text-center">Analysis with the PSY-IVX method </h2>
-             <h4 class="text-center"> An application of the PSY-IVX methodology to the price-to-rent ratio</h4>
+            <h2 class="text-center">PSYIVX methodology</h2>
+            <h4 class="text-center"> An application to the price-to-rent ratio</h4>
             <div class="container">
-             <p>
-                 This page provides figures for the price-to-rent (housing affordability) starting in 1975 whenever 
-                 possible for a selection of the countries covered in the database (black line). The page also provides a 
-                 fundamental-based measure of the price-to-rent ratio based on two explanatory variables (long-term interest rates 
-                 and the personal disposable income per capita), exuberance statistics obtained from the the difference 
-                 between the price-to-rent ratio and the fundamental-based prediction, as well as date-stamping of the specific periods of exuberance.
-            </p>
 
-            <p>
-                The predictive regression is trained on the sample up to 2019:Q4, therefore excluding the pandemic, as indicated by 
-                the dashed vertical lines. The functionality added to the webpage includes a button that allows to consider this predictive 
-                model or to exclude it. For related efforts to monitor housing markets, see: https://housing-fever.com/
-             </p>
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <p>
+                            The PSY-IVX approach has two steps. The first step decomposes log price-to-rent ratios into fundamental 
+                            and non-fundamental components. The fundamental component reflects underlying economic and financial conditions 
+                            hat are relevant to the housing market and the determination of house prices. The non-fundamental component is a
+                            residual that embodies the impact of speculative behavior in the market. The decomposition is accomplished using a 
+                            recently developed IVX estimation technique and a reduced-form econometric model that measures the empirical effects
+                            of economic fundamentals. This approach allows for complex trending features in the data as well as the interdependencies 
+                            that are characteristic of many indicators of prevailing economic conditions. The second step applies the PSY explosive detection
+                            method to the estimated non-fundamental component, thereby revealing the extent of speculative market behaviour that goes beyond 
+                            prevailing economic indicators.
+                        </p>
+                    </div>
+                    
+                    <div class="col-12 col-md-4">                        
+                        <div class="image">
+                                <a href="https://housing-fever.com/" class="hvr-pulse;">
+                                    <img src="assets/img/housing-fever2.png" alt="Housing Fever" style=" border-radius: 25px;">
+                                    <p style="color:white;font-size:20px;"> HOUSING FEVER </p>
+                                    <p style="color:#80225f;font-size:16px;padding-top:40px;"> Insights from an <br> Econometric Thermometer </p>
+                                </a>
+                        </div>
+                    
+                    </div>
+                    <div class="col-12">
+                        <p>
+                        For the decomposition, we separate the sample into a training sample (until December 2019) and a monitoring sample (from January 2020 onward). 
+                        The reduced-form regression model is estimated with IVX using data from the training sample, accounting for dependence over time in the data. 
+                        The estimated model coefficients are used to compute the non-fundamental component in both the training and monitoring samples. For the PSY 
+                        explosive root test, the minimum window size is set as <em>T<sub>min </sub> = 0.01T<sub>0 </sub> + 1.8√T<sub>0</sub> </em> , where T<sub>0</sub> is the number of observations in the training sample. 
+                    </p>
+                    </div>    
+                </div>
              </div>
          </section>
-         
+
+         <section id="publications">
+             <div class="container">
+                 <!-- <div class="publications-grid-container"> -->
+                 <div class="row">
+                     <div class="col-12 col-md-6">
+                         <div class="card">
+                             <div class="card-body">
+                                 <div class="row">
+                                     <div class="col-2 col-md-2">
+                                         <i class="fas fa-graduation-cap fa-3x"></i>
+                                     </div>
+                                     <div class="col-9 col-md-9 offset-1">
+                                         <p><strong> Shi, S. and Phillips, P.C.B. (2021)</strong></p>
+                                         <p><a href="http://doi.org/10.1111/joes.12430 " target="_blank">
+                                                 Diagnosing Housing Fever with an Econometric Thermometer</a></p>
+                                         <p>Journal of Economic Surveys (forthcoming)</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                        </div>
+                 </div>
+             </div>            
+         </section>
+
 
         <section id="methodology" class="bg-gray">
             <h2 class="text-center">Reporting the Evidence</h2>
