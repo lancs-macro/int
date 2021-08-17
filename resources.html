@@ -196,10 +196,8 @@
             <div class="container">
                 <p>
                     Mildly explosive behavior is modeled by an autoregressive process with a root that exceeds unity,
-                    but
-                    remains within the vicinity of one (Phillips et al., 2015a,b). This represents a small departure
-                    from
-                    martingale behavior, but is consistent with the submartingale property often used in the asset
+                    but remains within the vicinity of one (Phillips et al., 2015a,b). This represents a small departure
+                    from martingale behavior, but is consistent with the submartingale property often used in the asset
                     pricing literature to model self-fulfilling prophecies (rational bubbles). The GSADF test achieves
                     this by recursively implementing a right-tailed ADF-type regression test using a rolling window
                     procedure (Phillips et al., 2015a,b; Pavlidis et al., 2016).
@@ -222,7 +220,7 @@
                 </p>
                 <p>
                     The GSADF approach uses a variable window width approach, allowing starting as well as ending points
-                    to change within a predefined range [r0, 1], which enhances the flexibility of the ADF framework to
+                    to change within a predefined range [0, r<sub>2</sub>-r<sub>0</sub>], which enhances the flexibility of the ADF framework to
                     identify consistently, periodically-occurring periods of mildly explosive behavior within a sample.
                     The resulting GSADF statistic can then be used to test the null hypotheses of unit root against its
                     right-tailed mildly explosive alternative by comparing it to its corresponding critical values.
@@ -233,17 +231,20 @@
 
             <h4 style = "padding-top:2rem;" class="text-center">Reporting the Evidence</h2>
             <div class="container">
+                    
                 <p>
-                    Statistical significance based on the GSADF procedure can be assessed against critical values
-                    obtained under the null hypothesis of no-explosive behavior. The Backward SADF (BSADF)
-                    statistic computed over the sequence of ADF for all possible r1 and r2 (Phillips et al.
-                    (2015a,b)): when above the 95% critical value – indicates evidence of mildly explosive behavior
-                    at conventional statistical levels. GSADF statistic below 95% critical value, but above 90% (or
-                    for some just 80%) critical value – indicates that caution seems warranted, but there is not
-                    enough evidence to detect mildly explosive behavior at conventional statistical significance
-                    levels. GSADF statistic below 90% (or 80%) critical value – indicates that there is not enough
-                    evidence to signal an episode of mildly explosive behavior.
+                    Statistical significance based on the GSADF procedure can be assessed against critical values obtained under the null hypothesis 
+                    of no-explosive behavior over the entire testing period. The alternative is that there is at least one speculative period over the sample.
                 </p>
+                <p>
+                    For the identification of exuberance periods, the backward SADF (BSADF) statistic is computed for each r2, which ranges between r0 and 1. 
+                    The BSADF test for r2 is the supremum of the ADF statistic sequence obtained from subsamples whose ending points are on r2 and starting points vary between 0 and r2-r0. The BSADF statistics are linked to the GSADF statistic in the form of GSADF=sup(BSADF_r2), where the sup is taken over all values of r2. The BSADF statistic sequence is compared with its corresponding critical value sequence for the identification of starting and ending dates of exuberance. See Phillips, et al. (2015ab) for details.</p>
+                <p>
+                    The GSADF test is conducted in the first step. If we reject the null hypothesis of no exuberance, the BSADF test is then employed to 
+                    identify the bubble origination and termination dates. Test statistics below 95% critical value, but above 90% (or for some just 80%) critical 
+                    value – indicates that caution seems warranted, but there is not enough evidence to detect mildly explosive behavior at conventional statistical significance levels. Test statistic below 90% (or 80%) critical value – indicates that there is not enough evidence to signal an episode of mildly explosive behavior.
+                </p>
+
             </div>
         </section>
 
@@ -287,7 +288,7 @@
                         <p>
                             The PSY-IVX approach has two steps. The first step decomposes log price-to-rent ratios into fundamental 
                             and non-fundamental components. The fundamental component reflects underlying economic and financial conditions 
-                            hat are relevant to the housing market and the determination of house prices. The non-fundamental component is a
+                            that are relevant to the housing market and the determination of house prices. The non-fundamental component is a
                             residual that embodies the impact of speculative behavior in the market. The decomposition is accomplished using a 
                             recently developed IVX estimation technique and a reduced-form econometric model that measures the empirical effects
                             of economic fundamentals. This approach allows for complex trending features in the data as well as the interdependencies 
