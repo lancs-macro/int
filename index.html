@@ -93,39 +93,47 @@
     <section id="intro" class="text-center">
         <div class="container">
             <h1>International Housing Observatory</h1>
-            <h5 class="topics-sub" style="margin-bottom:2rem;">A project developed to improve understanding of international house price dynamics
+            <h5 class="topics-sub" style="margin-bottom:2rem;">A project developed to improve understanding of
+                international house price dynamics
             </h5>
         </div>
     </section>
 
     <section id="methodology">
 
-         <h3 style="text-align:center; margin-bottom:3rem; margin-top:2rem;">
-                IHO's own Enrique Martinez Garcia wins 2023 Central Banking award in Economics
-         </h3>
+        <h3 style="text-align:center; margin-bottom:3rem; margin-top:2rem;">
+            IHO's own Enrique Martinez Garcia wins 2023 Central Banking award in Economics
+        </h3>
 
         <div class="container">
-             
+
             <div class="row">
                 <div class="col-md-4" style="text-align: center;">
                     <img src="assets/img/cb_awards.png" class="img-fluid" alt="Responsive image" width="">
                 </div>
 
                 <div class="col-md-8">
-                  
+
 
                     <p>
-                        Martinez Garcia’s work with the International Housing Observatory (IHO) has been recognized for its contribution to the study of complex issues in housing, including exuberance and financial stability.
+                        Martinez Garcia’s work with the International Housing Observatory (IHO) has been recognized for
+                        its contribution to the study of complex issues in housing, including exuberance and financial
+                        stability.
                     </p>
 
                     <p>
-                        According to Central Banking, this "breakthrough research is delivering critical policy insights." The Central Banking's article on the award also cites the strength of the cooperation between the Dallas Fed and Lancaster University through the International Housing Observatory, and the "'state-of-the-art' econometrics used to generate the results."
+                        According to Central Banking, this "breakthrough research is delivering critical policy
+                        insights." The Central Banking's article on the award also cites the strength of the cooperation
+                        between the Dallas Fed and Lancaster University through the International Housing Observatory,
+                        and the "'state-of-the-art' econometrics used to generate the results."
 
                     </p>
 
                     <p>
-                        For more information on this, please see the 
-                        <a href="https://www.centralbanking.com/awards/7954701/economics-in-central-banking-enrique-martinez-garcia-the-federal-reserve-bank-of-dallas" target="_blank" rel="noopener" style="color: rgb(49, 70, 88) !important; text-decoration:underline !important;">
+                        For more information on this, please see the
+                        <a href="https://www.centralbanking.com/awards/7954701/economics-in-central-banking-enrique-martinez-garcia-the-federal-reserve-bank-of-dallas"
+                            target="_blank" rel="noopener"
+                            style="color: rgb(49, 70, 88) !important; text-decoration:underline !important;">
                             full Central Banking article.
                         </a>
                     </p>
@@ -133,11 +141,37 @@
             </div>
         </div>
 
-    
+
 
     </section>
 
-    <section id="c3-chart">
+    <section id="chart-plotly">
+        <div class="container">
+            <div class="chart-row">
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                    onclick="switchPlot();" />
+            </div>
+            <div class="chart-row">
+                <iframe id="chart" src="https://api.housing-observatory.com/visualizations/uk/rhpi"
+                    class="iframe-index"></iframe>
+            </div>
+    </section>
+
+    <script language="javascript">
+        function switchPlot() {
+            if (document.getElementById("chart-button").value == "Switch: Level") {
+                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi';
+                document.getElementById("chart-button").value = "Switch: Growth";
+
+            } else {
+                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi_yoy';
+                document.getElementById("chart-button").value = "Switch: Level";
+            }
+
+        }
+    </script>
+
+    <!-- <section id="c3-chart">
         <div class="container">
             <div class="chart-row">
                 <div></div>
@@ -192,7 +226,7 @@
                 }
             }
         }
-    </script>
+    </script> -->
 
 
     <section id="topics" class="bg-gray">
@@ -235,7 +269,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-7">
-                    <iframe src="https://api.housing-observatory.com/visualizations/int/map" class = "iframe-index" frameborder="0"></iframe>
+                    <iframe src="https://api.housing-observatory.com/visualizations/int/map" class="iframe-index"
+                        frameborder="0"></iframe>
                     <!-- <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="..."> -->
                     <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
                 </div>
