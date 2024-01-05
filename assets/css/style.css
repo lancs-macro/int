@@ -53,15 +53,15 @@
     text-anchor: start;
     transform: rotate(0deg);
 } */
- .chart-row {
-     display: flex;
-     justify-content: space-between;
- }
+.chart-row {
+    display: flex;
+    justify-content: space-between;
+}
 
- #chart-button {
-     cursor: pointer;
-     color: black;
- }
+#chart-button {
+    cursor: pointer;
+    color: black;
+}
 
 #chart-button:hover {
     color: white;
@@ -74,7 +74,7 @@
 
 
 .c3-line {
-    stroke-width:1.5px !important;
+    stroke-width: 1.5px !important;
     /* stroke-dasharray: 5, 5; */
 }
 
@@ -82,6 +82,7 @@
     #c3-chart-mobile {
         display: none !important;
     }
+
     .c3-axis-y-label {
         font-size: 16px;
     }
@@ -91,6 +92,7 @@
     #c3-chart {
         display: none !important
     }
+
     #c3-chart-mobile {
         display: inline;
     }
@@ -341,13 +343,13 @@
     font-weight: 500;
 }
 
-#methodology h4{
+#methodology h4 {
     color: grey;
-    margin-top:-1rem;
-    padding-bottom:1rem
+    margin-top: -1rem;
+    padding-bottom: 1rem
 }
 
-/* PSYIVX section */ 
+/* PSYIVX section */
 
 .image {
     position: relative;
@@ -363,8 +365,8 @@
 }
 
 .image img:hover {
-     -webkit-filter: brightness(0.5);
-     filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
 }
 
 /*Code section*/
@@ -439,7 +441,6 @@
     margin: 0;
 }
 
-#chart-plotly {}
 
 @media (max-width: 700px) {
     #chart {

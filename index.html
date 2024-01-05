@@ -99,13 +99,46 @@
         </div>
     </section>
 
-    <section id="methodology">
+    <style>
+        #more {
+            display: none;
+        }
+    </style>
 
-        <h3 style="text-align:center; margin-bottom:3rem; margin-top:2rem;">
-            IHO's own Enrique Martinez Garcia wins 2023 Central Banking award in Economics
-        </h3>
-
+    <section>
         <div class="container">
+            <h2> Latest Report:</h2>
+
+            <div style="margin:0px;padding:0px;overflow:hidden">
+                <iframe id="iFrame1" src="reports/2024q1/report.html" frameborder="0"
+                    style="overflow:hidden;height:100vh;width:100%; border: none; width: 100%;"></iframe>
+            </div>
+
+            <!-- <div>
+                <iframe id="reportFrame" src="reports/2024q1/report.html"
+                    style="display: block; border: none; width: 100%; height:30%; overflow: hidden;"></iframe>
+            </div> -->
+
+            <!-- <button class="btn btn-primary" onclick="showFullReport()" id="myBtn">Read more</button> -->
+        </div>
+    </section>
+    <script>
+        function expandFrame() {
+            var reportFrame = document.getElementById("reportFrame");
+            reportFrame.style.height = "100%";
+        }
+    </script>
+
+
+
+    <!--  Render html from reports 2024q1 -->
+
+
+    <!-- <h3 style="text-align:center; margin-bottom:3rem; margin-top:2rem;">
+            IHO's own Enrique Martinez Garcia wins 2023 Central Banking award in Economics
+        </h3> -->
+
+    <!-- <div class="container">
 
             <div class="row">
                 <div class="col-md-4" style="text-align: center;">
@@ -139,37 +172,13 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
-    </section>
 
-    <section id="chart-plotly">
-        <div class="container">
-            <div class="chart-row">
-                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
-                    onclick="switchPlot();" />
-            </div>
-            <div class="chart-row">
-                <iframe id="chart" src="https://api.housing-observatory.com/visualizations/int/rhpi"
-                    class="iframe-index"></iframe>
-            </div>
-    </section>
 
-    <script language="javascript">
-        function switchPlot() {
-            if (document.getElementById("chart-button").value == "Switch: Level") {
-                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi';
-                document.getElementById("chart-button").value = "Switch: Growth";
 
-            } else {
-                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi_yoy';
-                document.getElementById("chart-button").value = "Switch: Level";
-            }
-
-        }
-    </script>
 
     <!-- <section id="c3-chart">
         <div class="container">
@@ -265,37 +274,33 @@
         </div>
     </section>
 
-    <section id="markets" class="text-center">
+    <section id="chart-plotly">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-7">
-                    <iframe src="https://api.housing-observatory.com/visualizations/int/map" class="iframe-index"
-                        frameborder="0"></iframe>
-                    <!-- <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="..."> -->
-                    <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="container">
-
-                        <h2>Discover & Interact</h2>
-                        <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
-                        <p>
-                            You will find a comprehensive set of information and interactive tools to perform real-time
-                            monitoring of international real estate markets. This webpage provides an interactive
-                            platform to access these statistics.
-                        </p>
-
-                        <h5 class="text-center">
-
-                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow">
-                                Navigate to Dashboard to find out more !
-                            </a>
-                        </h5>
-                    </div>
-                </div>
+            <div class="chart-row">
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                    onclick="switchPlot();" />
             </div>
-        </div>
+            <div class="chart-row">
+                <iframe id="chart" src="https://api.housing-observatory.com/visualizations/int/rhpi"
+                    class="iframe-index"></iframe>
+            </div>
     </section>
+
+    <script language="javascript">
+        function switchPlot() {
+            if (document.getElementById("chart-button").value == "Switch: Level") {
+                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi';
+                document.getElementById("chart-button").value = "Switch: Growth";
+
+            } else {
+                document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/int/rhpi_yoy';
+                document.getElementById("chart-button").value = "Switch: Level";
+            }
+
+        }
+    </script>
+
+
 
     <!--Footer -->
     <div id="footer-placeholder"></div>
@@ -305,6 +310,28 @@
         });
     </script>
     <!--end of footer-->
+    <script>
+
+    </script>
+    <script>
+
+        function myFunction() {
+
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
 </body>
 
 </html>
