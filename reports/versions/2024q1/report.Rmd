@@ -1,7 +1,5 @@
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic quo, fuga ullam omnis consequuntur facere neque vitae. Ipsam delectus, ea ratione possimus molestias iste aut cupiditate alias dolorem quas!
 
-
-
 ```{r}
  1 + 1
 ```
@@ -11,7 +9,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic quo, fuga u
 ```{r}
 plot.ts(rnorm(100))
 ```
-
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic quo, fuga ullam omnis consequuntur facere neque vitae. Ipsam delectus, ea ratione possimus molestias iste aut cupiditate alias dolorem quas!
 
