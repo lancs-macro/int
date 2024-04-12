@@ -1,0 +1,117 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# Inernational Housing Market Report: Q3 2023
+
+## Executive Summary
+
+In the third quarter of 2023, the international housing market presents a similar pattern to the previous quarter with positive quarterly growth rates after a year of a negative growth profile. The interest rate hiking cycle of the last couple of years by most central banks has put downward pressure on housing prices due to increased financing costs. However, the recent hold in policy rate hikes as inflation slows down is being read by the market as a prospective end of tight monetary policy. Such a shift in expectations, amongst other factors, could explain the sustained positive profile in prices observed in the latest data release. If monetary policy by major central banks loosens, further increases in house prices would be expected.
+
+Economic Indicators In the third quarter of the year, the US and other major advanced economies have kept their policy rates steady whilst developing economies have raised interest rates further. Despite the slowdown in the hiking pace, the world's short-term interest rates are at the highest level of the past 20 years. As seen at the start of the year with the financial turmoil in the US banking sector and elsewhere (with the collapse of Credit Suisse), tighter financial conditions can pose threats to financial stability. Amidst the tense financial sector, central banks around the globe are still determined to conduct prudent monetary policy to win the battle against inflation which has been on a downward track since it peaked last year. Factors like the growth slowdown in China, the debate on soft vs hard landing, or the overall uncertainty due to geopolitical tensions around the globe are contributing to the subdued growth path we are observing this quarter. The exception is the US where a strong labor market is backing up the economy in spite of the aforementioned headwinds.
+
+## Global Property Prices and Trends
+
+### 1.1 Property Prices
+
+In the latest quarter, global real property prices increased slightly (+0.04%) showing positive growth for the second time this year since the negative growth path that started in 2022Q2. Countries like Denmark, the US, Australia, and the UK experienced higher growth rates relative to the previous quarter (+2.4%, +1.2%, +1.0%, and 0.25% respectively), whereas house prices in Canada and Germany declined (-1.2% and -2.8%, respectively). The latest data could suggest a sustained change in direction for future property prices. Yet, overall, current house prices are at a significantly lower level compared to last year after adjusting for PCE inflation.
+
+### 1.2 Affordability
+
+Property has become less affordable compared to last quarter with a global quarterly growth rate in the real house price-to-income ratio of +0.2%. A slight positive growth in real property prices accompanied by negative income growth in real terms (-0.1%) has led to lower affordability. Finally, the latest uptick in the house-to-income ratio is the first sign of a potential change in dynamics after one year of sequential negative growth rates.
+
+### 1.3 Rental Prices and/or Mortgage Rates
+
+In the third quarter of 2023 global prime rental prices accelerated to an average annual growth of 7.9% compared to 7.5% in the previous quarter. The latest data confirms that rents in the most sought after cities are rising 3.5 times faster than the long-term pre-pandemic trend. The strongest performances can be found in Auckland, Tokyo, and Sydney whilst New York's growth in prime rental prices cooled down to the lowest value in the last 2 years. Singapore's strong annual growth contrasts with the recent decline this quarter. In general, it appears that upward pressure will remain in prime rental markets, yet some headwinds from lower affordability could hinder this process. The interest rate hiking cycle has put upward pressure on mortgage rates delaying mortgage-taking due to high borrowing costs. Recent data points to a slowdown in inflation which has put the hiking
+
+pace on hold. This may provide some breathing room for homeowners with adjustable mortgage rates in the future.
+
+### Selected Housing Government Policies and Regulations
+
+In the US, the House of Representatives passed the First Home Savings Account Act of 2023 (July 2023). The bill will allow taxpayers to deposit a limited amount of their savings in a tax-advantaged account for the purchase of a first home. This policy could incentivize young families to buy a house putting upward pressure on house prices.
+
+In June 2023, the UK HM Treasury and the Financial Conduct Authority (FCA) published a Mortgage Charter. This sets out protections for mortgage borrowers facing financial difficulty due to inflation and higher cost of living. The Charter agrees that a borrower will not be forced to leave their home without their consent within 12 months of their first missed mortgage payment, unless there are exceptional circumstances. The Charter has been signed by 31 mortgage lenders, representing 85% of the mortgage market. This policy, whilst protecting disadvantaged borrowers, could introduce some rigidities in the market.
+
+The Danish government has pledged to build more affordable housing, particularly in urban areas. The goal is to increase the supply of affordable housing, particularly in urban areas with long waiting lists for social housing. Additionally, the government is taking steps to address the shortage of construction workers, which is hindering the development of new housing.
+
+Several Swiss cantons have implemented or are considering zoning reforms to increase the supply of housing in their jurisdictions. These reforms typically involve relaxing zoning restrictions and allowing for the construction of denser housing, such as apartments and townhouses. Moreover, the Swiss Parliament is considering a reform of the country's rental laws. The proposed reform would make it more difficult for landlords to raise rents and would provide tenants with greater protection against eviction.
+
+```{r, echo=FALSE}
+
+library(ihpdr)
+library(ggplot2)
+library(dplyr)
+library(transx)
+library(forcats)
+
+raw <- ihpdr::ihpd_get(version = "2303")
+
+```
+
+### Comparison of recent real house price developments 
+#### (quarter-on-quarter growth rate, percent)
+
+```{r, echo=FALSE, show=FALSE, fig.align = 'center'}
+
+raw %>%
+  group_by(country) %>%
+  mutate(rpdi = transx::ldiffx(rpdi)*100) %>%
+  filter(row_number()==n()) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, rpdi, .desc = TRUE)) %>%
+  ggplot(aes(x = country, y = rpdi)) +
+  geom_col() +
+  theme_bw() + 
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.title.y = element_blank()
+  ) 
+```
+
+### Comparison of recent real personal disposable income developments
+#### (quarter-on-quarter growth rate, percent)
+
+```{r, echo=FALSE, fig.align = 'center'}
+raw %>%
+  group_by(country) %>%
+  mutate(rhpi = transx::ldiffx(rhpi)*100) %>%
+  filter(row_number()==n()) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, rhpi, .desc = TRUE)) %>%
+  ggplot(aes(x = country, y = rhpi)) +
+  geom_col()+
+  theme_bw() + 
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.title.y = element_blank()
+  ) 
+
+
+```
+
+### Comparison of recent real affordability developments 
+#### (quarter-on-quarter growth rate, percent)
+
+```{r, echo=FALSE, fig.align = 'center'}
+
+raw %>%
+  group_by(country) %>%
+  mutate(afford = rhpi/rpdi) %>%
+  mutate(afford = transx::ldiffx(afford)*100) %>%
+  filter(row_number()==n()) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, afford, .desc = TRUE)) %>%
+  ggplot(aes(x = country, y = afford)) +
+  geom_col() +
+  theme_bw() + 
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1),
+    axis.title.y = element_blank()
+  )
+```

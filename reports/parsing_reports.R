@@ -10,5 +10,3 @@ base <- read_file('base.html')
 result <- whisker.render(base, list(content = report))
 
 write_lines(result, "report2024q1.html")
-
-
