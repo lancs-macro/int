@@ -76,8 +76,16 @@
 
   <!--Main body-->
   <div class=" container-fluid">
-    <iframe src="versions/2023q4/report.html" width="100%" height="100%" frameborder="0" style="height: 100vh; border: none; overflow: hidden; position: fixed;  top: 170px; z-index: 999999; padding-bottom: 170px;
-  "></iframe>
+    <iframe src="versions/2023q4/report.html" style="display: block;
+    border: none;
+    width: 100%;
+    min-height: 190vh;
+    height: auto !important;
+    padding: 0;
+    padding-top: 2rem;
+    margin: 0;"></iframe>
+    <!-- <iframe src=" versions/2023q4/report.html" width="100%" height="100%" frameborder="0" style="height: 100vh; border: none; position: fixed;  top: 170px; z-index: 999999;
+  "></iframe> -->
     <!-- <div style="padding: 2rem 0 2rem 0;">
       <a class="btn btn-secondary hvr-pulse-grow" style="float: right;color:white !important;"
         href="reports/2024q1.html">
@@ -89,13 +97,14 @@
 
 
 
-  </div>
+  <!--Footer -->
   <div id="footer-placeholder"></div>
   <script>
     $(function () {
       $("#footer-placeholder").load("footer.html");
     });
   </script>
+
 
 </body>
 
