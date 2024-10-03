@@ -1,0 +1,58 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# House prices stabilize amidst sluggish global disinflation
+
+<h3 style="color:grey;">2024Q1 IHO Global Housing Outlook</h3>
+
+### Executive Summary
+
+**As 2024 begins, global housing markets show signs of stabilization, with property prices leveling off after several quarters of slower growth.** At the same time, governments continue introducing measures to improve housing affordability and control rental price increases. Despite these efforts, persistent inflation is delaying the normalization of monetary policy, creating uncertainty that is straining household finances. The sustained policy uncertainty could potentially dampen housing demand, particularly if inflationary pressures continue to linger.
+
+<!-- <center> -->
+
+<!-- ```{r, out.width="70%", out.height="70%"} -->
+<!-- knitr::include_graphics("D:/1_PROJECTS/IHO/IHO_23Q4/Chart_IHO23Q4.png")  # adapt path -->
+<!-- ``` -->
+<!-- </center> -->
+
+### Economic Indicators
+
+**Global [inflation](https://www.dallasfed.org/research/international/dgei/cpi) remains “sticky,” contributing to uncertainty in the economic outlook.** Divergence in [policy rates](https://www.dallasfed.org/research/international/dgei/policy) between advanced and emerging economies has widened, with many emerging markets now entering a monetary loosening cycle while advanced economies continue to face tighter conditions. This divergence is reflected in [long-term interest rates](https://www.dallasfed.org/research/international/dgei/ltrates), with countries such as the United States seeing rates rise, while many emerging markets experience a downward trend.
+
+While global financial conditions remain tight, developing economies have begun to reverse their monetary policy course earlier than advanced economies, particularly as inflationary pressures ease. Economic [growth](https://www.dallasfed.org/research/international/dgei/gdp) in the first quarter of 2024 was stronger than expected, driven by improved performance in Europe’s services and exports, and a rebound in China’s private consumption despite the worsening property crisis. However, weaker-than-expected growth in the U.S. has tempered some of this optimism. 
+
+### Global Property Prices and Trends
+
+#### Property prices plateau 
+
+After two consecutive quarters of decline, global real property prices have stabilized, with no significant changes during the first quarter of 2024. Croatia and Portugal stood out with the highest property price growth, posting quarter-on-quarter (QoQ) increases of 3.0% and 2.8% respectively. In contrast, Luxembourg, Germany, and France saw further declines in house prices ( -2.5%, -2.3%, and -2.2%, all QoQ). In the U.S. and U.K., property prices showed marginal upticks of 0.3% and 0.2%, while Spain experienced a 0.6% decline (all QoQ). Despite this stabilization, global house prices remain 2.8% higher than the average of the last five years.
+
+#### Rising affordability
+
+Global housing affordability improved this quarter, as the real house price-to-income ratio fell by 0.25% QoQ. The trend of increasing affordability, which began in the second quarter of 2022, continued, with countries like Luxembourg, Germany, and France seeing improvements due to falling house prices and rising real personal disposable income. However, Portugal and the Netherlands experienced a deterioration in affordability, driven by rising house prices and declining income. In Spain, a significant fall in income further worsened affordability despite the decline in house prices.
+
+#### Upward pressure on rental prices 
+
+Rental prices rose in most countries, with notable increases in Portugal (+2.2%), Canada (+1.4%), and the U.K. (+1.25%), all QoQ. Only four countries, including Spain, Japan, the Netherlands, and the Republic of Korea, saw quarterly declines in rental prices (-0.9%, -0.8%, -0.6%, and -0.1%, respectively). U.S. rental prices have continued their upward trajectory since the second half of 2022, rising by 0.4% QoQ  in the first quarter of 2024.
+
+
+### Selected Housing Government Policies and Regulations
+
+**United States:** The U.S. government has announced several initiatives aimed at increasing housing supply and reducing costs. Key measures include extending the Federal Financing Bank Risk Sharing program to support the development and preservation of affordable rental homes, simplifying the HOME Investment Partnerships Program, and unlocking new funding for housing for low-income seniors. There is also increased financial support for manufactured housing, including a $235 million HUD grant and expanded loan limits. 
+
+**Canada:** The Canadian government has focused on boosting housing affordability through measures outlined in its 2024 federal budget. These include strengthening the Canada Mortgage and Housing Corporation (CMHC) by allowing 30-year amortizations for first-time homebuyers purchasing new builds, and allocating an additional $15 billion to the Apartment Construction Loan Program to increase rental unit construction.
+
+**France:** In its latest budget, the French government expanded the MaPrimeRénov' program, providing more substantial financial support for energy-efficient home renovations. Increased subsidies for low-income households and broader eligibility for home upgrades could positively impact the housing market by encouraging further investments in home improvements.
+
+**Spain:** Spain has revised its 2023 Housing Law to provide tax incentives aimed at easing the pressure on rental markets. Key changes include a reduction in tax deductions for primary property rentals from 60% to 50%, but with more generous deductions in certain cases. For example, landlords who reduce rents by 5% relative to prior contracts can claim a 90% deduction for properties located in ‘stressed areas,’ while those renting to individuals aged 18-35 in such areas can claim a 70% deduction.
+
+**Ireland:** Ireland has introduced a Vacant Homes Action Plan to address housing supply and affordability by bringing vacant properties back into the market. Key initiatives include establishing a national register of vacant properties, offering incentives for owners to restore these homes for use, and potentially introducing a tax on long-term vacancies.
+
