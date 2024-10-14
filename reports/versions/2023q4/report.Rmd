@@ -19,13 +19,13 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 <center>
 
 ```{r, out.width="70%", out.height="70%"}
-knitr::include_graphics("D:/1_PROJECTS/IHO/IHO_23Q4/Chart_IHO23Q4.png")  # adapt path
+knitr::include_graphics("./Chart_IHO23Q4.png")  # adapt path
 ```
 </center>
 
 ### Economic Indicators
 
-**Central banks’ tightening policies have been associated with changes in [inflation rates](https://www.dallasfed.org/research/international/dgei/cpi) back to target.** Despite the slowdown in the hiking pace, the world’s [short-term interest rates](https://www.dallasfed.org/research/international/dgei/policy) are at the highest level of the past 20 years, while [long-term interest rates](https://www.dallasfed.org/research/international/dgei/ltrates) have also experienced similar increases. Weak global demand for goods weighed on activity leading to subdued global [growth](https://www.dallasfed.org/research/international/dgei/gdp) in the last quarter of 2023. The exception is the US where a strong labor market is backing up the economy.  
+<b>>Central banks’ tightening policies have been associated with changes in <a href="https://www.dallasfed.org/research/international/dgei/cpi" target="_blank">inflation rates</a> back to target.</b> Despite the slowdown in the hiking pace, the world’s <a href="https://www.dallasfed.org/research/international/dgei/policy" target="_blank">short-term interest rates</a> are at the highest level of the past 20 years, while <a href="https://www.dallasfed.org/research/international/dgei/ltrates" target="_blank">long-term interest rates</a> have also experienced similar increases. Weak global demand for goods weighed on activity leading to subdued global <a href="https://www.dallasfed.org/research/international/dgei/gdp" target="_blank">growth</a> in the last quarter of 2023. The exception is the US where a strong labor market is backing up the economy.  
 
 ### Global Property Prices and Trends
 
@@ -39,7 +39,7 @@ Global unaffordability as measured by the real house price-to-income ratio decre
 
 #### Mortgage and Rental Pressures
 
-Amidst a tight monetary policy landscape, mortgage rates have climbed, adversely impacting the housing market and placing additional financial stress on households with existing adjustable-rate mortgages. This period of high interest rates is revealing the full extent of the impact of tighter financial conditions on the housing market more quickly in those countries with stronger transmission channels, especially as mortgage rates reset. This point has been noted recently in Chapter 2 of the International Monetary Fund’s [World Economy Outlook for April 2024](https://www.imf.org/en/Publications/WEO/Issues/2024/04/16/world-economic-outlook-april-2024). Real rental prices are accelerating relative to last quarter with Canada, Belgium, and Denmark experiencing the largest housing rent hikes (+1.6%, +1.3% and +1.1%, respectively). The US and the UK also experienced an uptick in real rents with quarterly increases of +0.95% and +0.7%. On the other side of the spectrum, the largest decrease in real rental prices was recorded in the Republic of Korea with almost a 1% drop.
+Amidst a tight monetary policy landscape, mortgage rates have climbed, adversely impacting the housing market and placing additional financial stress on households with existing adjustable-rate mortgages. This period of high interest rates is revealing the full extent of the impact of tighter financial conditions on the housing market more quickly in those countries with stronger transmission channels, especially as mortgage rates reset. This point has been noted recently in Chapter 2 of the International Monetary Fund’s <a href="https://www.imf.org/en/Publications/WEO/Issues/2024/04/16/world-economic-outlook-april-2024" target="_blank">World Economy Outlook for April 2024</a>. Real rental prices are accelerating relative to last quarter with Canada, Belgium, and Denmark experiencing the largest housing rent hikes (+1.6%, +1.3% and +1.1%, respectively). The US and the UK also experienced an uptick in real rents with quarterly increases of +0.95% and +0.7%. On the other side of the spectrum, the largest decrease in real rental prices was recorded in the Republic of Korea with almost a 1% drop.
 
 
 ### Selected Housing Government Policies and Regulations
