@@ -184,14 +184,26 @@
 
 /* Section meet */
 
-#meet,
-#alumni {
-    text-align: center;
+#meet {
+    text-align: center !important;
     /* border-top: 1px solid #d5dadf; */
     padding: 2em 0;
 }
 
-#meet,
+#alumni {
+    text-align: center !important;
+    /* border-top: 1px solid #d5dadf; */
+    padding: 2em 0;
+}
+
+#meet .card {
+    border: 0px;
+    background-color: inherit;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
 #alumni .card {
     border: 0px;
     background-color: inherit;
@@ -200,31 +212,54 @@
     margin-bottom: 10px;
 }
 
-#meet,
+
+#meet h3 {
+    margin: 5px 0 0 0;
+    padding-top: 10px !important;
+}
+
 #alumni h3 {
+    margin: 5px 0 0 0;
+    padding-top: 10px !important;
+}
+
+#meet h4 {
+    color: rgba(49, 70, 88, 0.5);
     margin: 5px 0 0 0;
 }
 
-#meet,
 #alumni h4 {
     color: rgba(49, 70, 88, 0.5);
     margin: 5px 0 0 0;
 }
 
-#meet,
+#meet a {
+    color: #333;
+    text-decoration: none;
+}
+
 #alumni a {
     color: #333;
     text-decoration: none;
 }
 
-#meet,
+#meet ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 #alumni ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#meet,
+#meet li {
+    margin-bottom: 1em;
+    color: #333;
+}
+
 #alumni li {
     margin-bottom: 1em;
     color: #333;
