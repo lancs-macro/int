@@ -184,47 +184,52 @@
 
 /* Section meet */
 
-#meet {
+#meet,
+#alumni {
     text-align: center;
     /* border-top: 1px solid #d5dadf; */
     padding: 2em 0;
 }
 
-#meet .card {
+#meet,
+#alumni .card {
     border: 0px;
     background-color: inherit;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
 
-#meet h {
+#meet,
+#alumni h3 {
     margin: 5px 0 0 0;
 }
 
-#meet h4 {
+#meet,
+#alumni h4 {
     color: rgba(49, 70, 88, 0.5);
     margin: 5px 0 0 0;
 }
 
-#meet a {
+#meet,
+#alumni a {
     color: #333;
     text-decoration: none;
 }
 
-#meet ul {
+#meet,
+#alumni ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#meet li {
+#meet,
+#alumni li {
     margin-bottom: 1em;
     color: #333;
 }
 
-#meet .card {
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-}
 
 .thumbnail {
     position: relative;
@@ -279,7 +284,7 @@
 
 #publications {
     text-align: center;
-    padding: 0em 2em 2em 2em;
+    padding: 2em 2em 2em 2em;
 }
 
 #publications p {
