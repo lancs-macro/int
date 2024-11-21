@@ -1,5 +1,6 @@
 body a {
     color: rgb(49, 70, 88) !important;
+    font-weight: 500;
 }
 
 body .no-padding {
