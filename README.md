@@ -9,6 +9,7 @@
 <div class=" container-fluid">
     <iframe src="versions/{version}}/report.html" style="..."></iframe>
   </div>
+  Also adjust the height if needed - min-height: 280vh;
 ```
 5.Add a new column in the `report.html` file in the root folder with the following code:
 ```html

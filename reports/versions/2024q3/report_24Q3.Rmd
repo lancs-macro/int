@@ -1,0 +1,66 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Property and rental prices continue to rise straining global housing markets 
+
+<h3 style="color:grey;">2024Q3 IHO Global Housing Outlook</h3>
+
+### Executive Summary
+  
+**Pressures in the global housing market are intensifying, as property and rental prices continue to rise faster than inflation.** This trend, combined with stagnating affordability, is creating significant challenges for households and policymakers alike. Additional layers of uncertainty have been introduced into the global economy by ongoing political realignments. A shift towards more protectionist policies is seen as a potential disruptor of global supply chains, raising concerns about higher inflation just as price pressures are anticipated to ease closer to target. Against this background, a variety of strategies are being implemented by policymakers worldwide directed to housing, focusing particularly on improving affordability and increasing housing supply.  
+
+<center>
+
+```{r, out.width="70%", out.height="70%"}
+# knitr::include_graphics("E:/1_PROJECTS/IHO/IHO_24Q3/Chart_IHO2024Q3.png")  # adapt path 
+knitr::include_graphics("./Chart_IHO24Q3.png")  
+``` 
+</center>
+
+### Economic Indicators
+
+**Uncertainty about the global economic landscape heightened following recent developments, particularly affecting trade and geopolitics.** The risk of a resurgence of protectionist policies is seen as a potential disruptor of global supply chains, adding upward pressure to <a href="https://www.dallasfed.org/research/international/dgei/cpi" target="_blank">inflation</a> at a time when relief is anticipated. Additionally, efforts to foster growth through domestic fiscal stimulus may further strain already elevated public debt levels, complicating the price-stability objectives of most central banks. Although <a href="https://www.dallasfed.org/research/international/dgei/policy" target="_blank">policy rates</a> continue to decrease in most countries, the latest data shows an increase in the <a href="https://www.dallasfed.org/research/international/dgei/ltrates" target="_blank">long-term interest rates</a> and an appreciation of the U.S. dollar  <a href="https://www.dallasfed.org/research/international/dgei/ner" target="_blank">exchange rates</a> against other currencies.
+
+Global economic <a href="https://www.dallasfed.org/research/international/dgei/gdp" target="_blank">activity</a> has shown resilience; however, the prospect of rising barriers to trade intensifies uncertainties in an already strained geopolitical environment, potentially dragging down growth. Weaker global growth and heightened uncertainty can contribute to a decline in aggregate demand for housing, undermining the housing recovery or aggravating the correction wherever this is still ongoing. In some regions, such as the U.S., economic growth remains robust, bolstered by a strong labor market, even as inflation persists at elevated levels, contrary to expectations of a quicker return to target. In contrast, the U.K. and major economies like Germany and France face more daunting economic prospects, marked by deteriorating economic conditions and in some cases also mounting inflationary pressures. The U.K. government’s latest budget, aimed at addressing fiscal pressures through higher taxes, including an increase in Stamp Duty Land Tax for additional properties, is expected to reduce investor demand in the housing market, potentially tempering house price growth but causing short-term volatility as buyers rush to complete transactions before tax changes take effect. Meanwhile, in China, early signs of renewed economic growth are emerging, despite the underwhelming impact of recent fiscal stimulus measures. Additionally, rising long-term interest rates, to the extent that those pass through to mortgage rates, further tighten financial conditions restraining housing demand globally and compounding the challenges in the housing market.
+
+
+### Global Property Prices and Trends
+
+#### House price pressures mount
+
+Property prices have outpaced inflation for the third consecutive quarter. On average, real property prices increased by 0.3% quarter-on-quarter (QoQ). The Netherlands led the way with a robust 3.2% QoQ increase in real estate prices. Spain followed closely with a 1.7% QoQ rise, an acceleration of 0.6 percentage points from the previous quarter. The U.K. also saw an increase, with house prices rising by 1.3% over the period, while the U.S. recorded a more modest uptick of 0.5%. In contrast, Canada emerged as a significant outlier, registering a 2.3% decline in property prices.
+
+Compared to the evidence from last quarter, the latest analysis from the International Housing Observatory suggests that housing markets in the U.S., Croatia, Israel, and Portugal continue to exhibit signs of renewed post-pandemic <a href="https://int.housing-observatory.com/dashboard" target="_blank">exuberance</a>. This marks a notable shift, as these countries recovered early and quickly have started to be identified as being at risk of overheating again. Despite this resurgence, the data does not reveal clear signs of exuberance in key metrics such as price-to-income or price-to-rent ratios in the U.S. or any of the other countries with available data. This reinforces the notion that global housing markets remain bifurcated. While some major economies, particularly the U.S., are showing early warning signs of a return to post-pandemic exuberance, others, such as Germany, France and China, are still contending with the lingering effects of sharp corrections that followed the correction of their housing markets since 2022. This divergence underscores the continued complexity and varied recovery trajectories within global housing markets.
+
+#### Affordability stagnates
+
+Global housing affordability exhibited a marginal 0.04% QoQ growth rate, reflecting similar quarterly growth profiles of real house prices and real personal disposable income. The Netherlands experienced the most significant deterioration in affordability this quarter, with the real house price-to-income ratio increasing by 3.5% QoQ, driven primarily by rising real house prices and a slight decline in real personal income. In Spain, affordability worsened by 1.7% QoQ, primarily due to upward-trending real property prices. The main political parties have recently announced measures to address affordability issues in Spain. The U.K. saw a 1% increase in the real house price-to-income ratio, further eroding affordability. In the U.S., affordability decreased less sharply than in the previous quarter, now recording growth of 0.3% QoQ only. Canada and Germany saw the most significant improvements in affordability, with decreases in the real house price-to-income ratio of 2.9% and 1.5%, respectively.
+
+
+#### Rental prices continue rising
+
+Real rental prices continued their upward trajectory across nearly all sampled countries. The Netherlands saw a notable 3.0% QoQ increase in rental prices, reversing the previous quarter's trend. The U.K. experienced a 1.7% QoQ increase, mirroring the previous quarter’s rise. In the U.S. and Spain, real rental prices continued to climb, with increases of 0.7% and 0.4% QoQ, respectively. In contrast, Finland, the Republic of Korea, and Israel recorded the most significant declines in real rental prices, each with a 0.3% QoQ decrease. 
+
+
+
+### Selected Housing Policies and Regulations
+
+**United States**: The American Housing and Economic Mobility Act was introduced to Congress in July 2024. This proposed legislation seeks to address housing affordability by allocating substantial funding for affordable housing programs and providing down payment assistance for first-time homebuyers. The act also includes provisions for reforming the estate tax and incorporates measures designed to combat discriminatory practices in the housing market. Additionally, it aims to enhance the efficiency of housing assistance programs, reflecting a comprehensive approach to tackling the nation's housing challenges.
+
+**China**: The Chinese government and the People's Bank of China (PBOC) announced a policy package to stabilize the property market. Key measures include lowering mortgage rates for both first and second homes by at least 30 basis points from the prevailing loan prime rate, relaxing or removing home purchase restrictions in many cities, and providing financial support to improve the financial health of struggling property developers.
+
+**Spain**: The Spanish government unveiled plans to regulate short-term and seasonal holiday rentals to address concerns about locals being priced out of the housing market. This initiative includes verifying that properties listed on platforms like Airbnb and Booking.com possess the necessary licenses. Additionally, plans to establish a registry of holiday rental properties by the end of 2025 are underway, along with considerations for mid-term rental measures. The government has also approved the distribution of €200 million for the Youth Rental Voucher, providing eligible young people (aged 35 or less) with a monthly grant of €250 for rent over two years to facilitate their emancipation.
+
+**The Netherlands**:  The Dutch government approved and put into effect the Affordable Rent Act, aiming to make housing more affordable by implementing significant regulations in the rental market, particularly in the mid-market segment. Key aspects include rent caps, the elimination of most fixed-term leases, and an expansion of rent control to a larger portion of rental properties. This regulation may prompt landlords to exit the market due to reduced rental income, effectively decreasing the rental supply.
+
+**Australia**: The Australian government started the ambitious national target to build 1.2 million well-located homes over five years, representing an additional 200,000 homes beyond the original National Housing Accord's goal announced last year. To support this initiative, the government announced several measures, including incentives to boost housing supply and affordability.
+
+**South Korea**: The South Korean government unveiled a real estate stabilization plan aimed at increasing housing supply and curbing speculative demand. The plan includes measures to expedite housing construction projects, particularly in the Seoul metropolitan area, and provide support for first-time homebuyers. The regulations also tighten loan-to-value and debt-to-income ratios, making it more challenging for buyers to secure high-percentage mortgages.
+
