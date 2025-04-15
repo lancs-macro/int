@@ -1,0 +1,44 @@
+{
+    "reports": [
+        {
+            "title": "Navigating uncharted waters: policy turmoil and property price instability",
+            "quarter": "Q1 2025",
+            "publish_date": "15/04/2025",
+            "description": "Economic uncertainty has emerged as an additional primary concern for housing markets, driven by heightened trade tensions and their potential impact on inflation outlook.",
+            "excerpt": "This uncertainty currently poses broad risks to housing stability, potentially worsening supply constraints and increasing pressure on both buyers and renters. ",
+            "link": "/reports/2025q1.html"
+        },
+        {
+            "title": "Property and rental prices continue to rise straining global housing markets",
+            "quarter": "Q3 2024",
+            "publish_date": "18/10/2024",
+            "description": "Pressures in the global housing market are intensifying, as property and rental prices continue to rise faster than inflation.",
+            "excerpt": "Analysis of 50 major cities shows rental prices increasing by an average of 8.2% year-over-year, outpacing wage growth in 85% of markets. This trend is particularly pronounced in urban centers with strong job markets.",
+            "link": "/reports/2024q3.html"
+        },
+        {
+            "title": "Rising house prices clouded by an uncertain international environment",
+            "quarter": "Q2 2024",
+            "publish_date": "12/07/2024",
+            "description": "In the second quarter of 2024, global housing markets exhibited a mix of property price trends, with rising affordability challenges.",
+            "excerpt": "While some markets show signs of cooling, others continue to experience strong price growth. The divergence in market performance highlights the complex interplay between local economic conditions and global financial factors.",
+            "link": "/reports/2024q2.html"
+        },
+        {
+            "title": "House prices stabilize amidst sluggish global disinflation",
+            "quarter": "Q1 2024",
+            "publish_date": "20/04/2024",
+            "description": "Global housing markets show signs of stabilization, with property prices leveling off after several quarters of slower growth.",
+            "excerpt": "The stabilization trend is most evident in markets that experienced rapid price growth in previous years. Experts suggest this could indicate a new phase of market maturity rather than a temporary pause.",
+            "link": "/reports/2024q1.html"
+        },
+        {
+            "title": "Market Cool-Down Insights",
+            "quarter": "Q4 2023",
+            "publish_date": "10/01/2024",
+            "description": "Housing affordability improves amidst market cool-down and high interest rates.",
+            "excerpt": "The cooling market presents opportunities for first-time buyers, though challenges remain in high-demand areas. Regional variations in price adjustments suggest a more nuanced market landscape than initially anticipated.",
+            "link": "/reports/2023q4.html"
+        }
+    ]
+}

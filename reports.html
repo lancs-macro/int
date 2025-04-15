@@ -1,149 +1,107 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resources | International Housing Observatory</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style-generic.css">
-
-    <!-- favicons -->
-    <link rel="shortcut icon" href="assets/img/iho-logo.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-
-    <meta property="og:description" content="">
-    <meta property="og:image" content="assets/img/logo.png">
-
-    <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
     <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-
-    <!-- Academic icons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <!-- Bootsrap Theme Journal -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
+    <!-- Then load the rest of the head content -->
+    <div id="head-placeholder"></div>
     <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-129604855-5');
+        $(function () {
+            $("#head-placeholder").load("components/header.html");
+        });
     </script>
+    <style>
+        .publish-date {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0.5rem 0;
+            font-style: italic;
+        }
+
+        .quarter-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
-
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
     <script>
         $(function () {
-            $("#nav-placeholder").load("nav.html");
+            $("#nav-placeholder").load("components/nav.html");
         });
     </script>
 
     <!--Main body-->
     <div class="container">
-
         <div class="row" style="padding-top:4rem;">
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-lg d-flex flex-column">
-                    <div class="card-body">
-                        <h5 class="card-title">2024Q3 IHO Global Housing Outlook</h5>
-                        <h6 class="card-text" style="min-height: 40px;">Property and rental prices continue to rise
-                            straining global housing markets
-                        </h6>
-                        <p style="min-height: 80px;">Pressures in the global housing market are
-                            intensifying, as property and rental prices continue to rise faster than
-                            inflation.</p>
-                        <a href="/reports/2024q3.html" class="btn btn-secondary hvr-pulse-grow"
-                            style="color:white !important;">View</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-lg d-flex flex-column">
-                    <div class="card-body">
-                        <h5 class="card-title">2024Q2 IHO Global Housing Outlook</h5>
-                        <h6 class="card-text" style="min-height: 40px;">Rising house prices clouded by an uncertain
-                            international environment</h6>
-                        <p style="min-height: 80px;">In the second quarter of 2024, global housing markets exhibited a
-                            mix of property price trends, with rising affordability challenges.</p>
-                        <a href="/reports/2024q2.html" class="btn btn-secondary hvr-pulse-grow"
-                            style="color:white !important;">View</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-lg d-flex flex-column">
-                    <div class="card-body">
-                        <h5 class="card-title">2024Q1 IHO Global Housing Outlook</h5>
-                        <h6 class="card-text" style="min-height: 40px;">House prices stabilize amidst sluggish global
-                            disinflation</h6>
-                        <p style="min-height: 80px;">Global housing markets show signs of stabilization, with property
-                            prices leveling off after several quarters of slower growth.</p>
-                        <a href="/reports/2024q1.html" class="btn btn-secondary hvr-pulse-grow"
-                            style="color:white !important;">View</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-lg d-flex flex-column">
-                    <div class="card-body">
-                        <h5 class="card-title">2023Q4 IHO Global Housing Outlook</h5>
-                        <h6 class="card-text" style="min-height: 40px;">Market Cool-Down Insights</h6>
-                        <p style="min-height: 80px;">Housing affordability improves amidst market cool-down and high
-                            interest rates.</p>
-                        <a href="/reports/2023q4.html" class="btn btn-secondary hvr-pulse-grow"
-                            style="color:white !important;">View</a>
-                    </div>
+            <div class="col-12 mb-4">
+                <div class="alert alert-info">
+                    <strong>Note:</strong> We have updated the reference period of the IHO report (including the title)
+                    to align our description of the current market situation with the latest developments in housing
+                    policies and regulations. Accordingly, the 2025Q1 report is the next report after 2024Q3. All
+                    reports remain accessible and up-to-date with their original publish dates.
                 </div>
             </div>
         </div>
+        <div class="row" id="reports-container">
+            <!-- Reports will be loaded here dynamically -->
+        </div>
     </div>
 
+    <!--Footer-->
     <div id="footer-placeholder"></div>
     <script>
         $(function () {
-            $("#footer-placeholder").load("footer.html");
+            $("#footer-placeholder").load("components/footer.html");
         });
     </script>
 
+    <script>
+        // Load and display reports from JSON
+        $(document).ready(function () {
+            $.getJSON('data/reports.json', function (data) {
+                const reportsContainer = $('#reports-container');
 
-
+                data.reports.forEach(report => {
+                    const reportCard = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">${report.title}</h5>
+                                    <div class="quarter-badge">${report.quarter}</div>
+                                    <div class="publish-date">Published: ${report.publish_date}</div>
+                                    <p class="card-text">${report.description}</p>
+                                    <a href="${report.link}" class="btn view-report-btn">View Report</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    reportsContainer.append(reportCard);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

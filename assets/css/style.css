@@ -502,3 +502,235 @@
 #chart-button:hover {
     color: white;
 }
+
+/* Report Cards */
+.report-card {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    border-left: 4px solid #314658;
+}
+
+.report-card:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+.report-card:hover {
+    transform: translateX(4px);
+    box-shadow: 4px 4px 0 #314658;
+}
+
+.report-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1;
+}
+
+.report-card .card-title {
+    color: #314658;
+    margin-bottom: 1rem;
+    min-height: 3.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-card .quarter-badge {
+    background: #314658;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.report-card .card-text {
+    color: #4b4b4b;
+    min-height: 5rem;
+    margin-bottom: 2rem;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.report-card .view-report-btn {
+    background: transparent;
+    color: #314658 !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    width: fit-content;
+    font-weight: 600;
+    border: 2px solid #314658;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.report-card .view-report-btn:hover {
+    background: #314658;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.report-card .card-excerpt {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(49, 70, 88, 0.03);
+    border-radius: 0;
+    border-left: 3px solid rgba(49, 70, 88, 0.1);
+    font-style: italic;
+}
+
+/* 404 Page Styles */
+.error-container {
+    max-width: 800px;
+    min-height: calc(100vh - 200px); /* Account for header and footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-column {
+    padding-top: 40px;
+}
+
+.error-message {
+    font-size: 20px;
+}
+
+.error-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 2rem 0;
+}
+
+/* Section announcement */
+#announcement {
+    background: #ffffff;
+    padding: 4rem 0;
+    margin: 3rem 0;
+    position: relative;
+}
+
+#announcement::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #314658, transparent);
+}
+
+#announcement::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #314658, transparent);
+}
+
+#announcement .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#announcement h2 {
+    color: #314658;
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+#announcement h4 {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+#announcement .content-wrapper {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#announcement .report-content {
+    color: #4b4b4b;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    border-left: 2px solid rgba(49, 70, 88, 0.1);
+}
+
+#announcement .report-content strong {
+    color: #314658;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+#announcement .report-content #reportExcerpt {
+    color: #666;
+    font-style: italic;
+}
+
+#announcement .publish-date {
+    color: #999;
+    font-size: 0.9rem;
+    display: block;
+    margin: 1.5rem 0;
+}
+
+#announcement .btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#announcement .btn {
+    background: transparent;
+    color: #314658 !important;
+    padding: 0.8rem 2rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border: 1px solid #314658;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#announcement .btn:hover {
+    background: #314658;
+    color: white !important;
+    transform: translateY(-1px);
+}
