@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "Nominal Prices Up, Access Down: The Global Housing Market at a Crossroads",
+            "quarter": "Q2 2025",
+            "publish_date": "15/07/2025",
+            "description": "Global housing markets remain in a fragile state, marked by continued nominal price increases and deepening affordability challenges.",
+            "excerpt": " In the first quarter of 2025, nominal house prices rose globally, yet remained broadly flat in real terms after adjusting for inflation. Affordability, after a brief pause, is worsening again, with Portugal, Spain, and Norway experiencing the sharpest declines as house prices outpaced income growth. Meanwhile, real rents declined in most markets, with notable exceptions in the U.K. and U.S., where both nominal and real rents moved higher. ",
+            "link": "/reports/2025q2.html"
+        },
+        {
             "title": "Navigating uncharted waters: policy turmoil and property price instability",
             "quarter": "Q1 2025",
             "publish_date": "15/04/2025",
