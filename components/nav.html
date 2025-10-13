@@ -25,12 +25,15 @@
       </div>
     </div>
     <div class="collapse navbar-collapse flex-grow-1 text-right " id="navbarNav">
-      <ul class="navbar-nav ml-auto flex-nowrap ">
+      <ul class="navbar-nav ml-auto flex-nowrap nav-links">
         <li class="nav-item ">
           <a href="index.html " class="nav-link ">Home</a>
         </li>
         <li class="nav-item ">
           <a href="reports.html " class="nav-link "> Reports</a>
+        </li>
+        <li class="nav-item">
+          <a href="nowcasting.html" class="nav-link">Nowcasting <span class="badge badge-info">NEW</span></a>
         </li>
         <li class="nav-item ">
           <a href="about.html " class="nav-link "> About</a>
@@ -38,6 +41,7 @@
         <li class="nav-item ">
           <a href="resources.html " class="nav-link ">Resources</a>
         </li>
+
         <!--<li class="nav-item ">
                     <a href="data.html " class="nav-link ">Data</a>
                 </li> -->
@@ -45,6 +49,35 @@
           <a class="btn hvr-pulse" href="dashboard.html" class="nav-link ">Dashboard</a>
         </li>
       </ul>
+      <script>
+        // Fix navigation links for subdirectories
+        $(document).ready(function () {
+          // Check if we're in a subdirectory by looking at the pathname
+          var path = window.location.pathname;
+          var isInSubdirectory = path.includes('/reports/') || path.includes('/nowcasting/') ||
+            (path.split('/').filter(p => p && p.indexOf('.html') === -1).length > 1);
+
+          if (isInSubdirectory) {
+            // Update navigation links to go back to root
+            $('.nav-links a').each(function () {
+              var href = $(this).attr('href');
+              if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
+                $(this).attr('href', '../' + href);
+              }
+            });
+            // Update logo/brand link
+            var brandHref = $('.navbar-brand').attr('href');
+            if (brandHref && !brandHref.startsWith('../')) {
+              $('.navbar-brand').attr('href', '../index.html');
+            }
+            // Update logo image path
+            var logoSrc = $('.navbar-brand img').attr('src');
+            if (logoSrc && !logoSrc.startsWith('../')) {
+              $('.navbar-brand img').attr('src', '../' + logoSrc);
+            }
+          }
+        });
+      </script>
     </div>
   </nav>
 </div>

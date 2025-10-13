@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:description" content="International House Price Nowcast - IHO Forecast Report">
+  <meta property="og:image" content="assets/img/logo.png">
+
+  <title>International House Price Nowcast - IHO</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Load jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/img/iho-logo.png" />
+
+  <!-- Google Fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+  <!-- Icon Libraries -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-generic.css">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- MathJax for math rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Analytics (async) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-129604855-5');
+  </script>
+
+  <style>
+    /* Sidebar TOC Styles - Right side */
+    .toc-sidebar {
+      position: fixed;
+      top: 180px;
+      right: 20px;
+      width: 220px;
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .toc-sidebar h4 {
+      color: #404040;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .toc-sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .toc-sidebar ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-sidebar ul li a {
+      color: #535353;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .toc-sidebar ul li a:hover {
+      color: #007bff;
+      padding-left: 5px;
+    }
+
+    .toc-sidebar ul li a.active {
+      color: #007bff;
+      font-weight: 600;
+      border-left: 3px solid #007bff;
+      padding-left: 8px;
+    }
+
+    /* Main content without left margin */
+    .content-with-toc {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-right: 260px;
+    }
+
+    /* Content sections */
+    .content-section {
+      padding: 3rem 0;
+    }
+
+    .content-section h2 {
+      color: #404040;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h3 {
+      color: #404040;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-section h4 {
+      color: #535353;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .content-section p {
+      color: #404040;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* Chart containers */
+    .chart-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .chart-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Tabs styling to match website */
+    .nav-tabs {
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 2rem;
+    }
+
+    .nav-tabs .nav-link {
+      color: #535353;
+      font-weight: 500;
+      border: none;
+      padding: 0.75rem 1.5rem;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #007bff;
+      background-color: transparent;
+      border-bottom: 3px solid #007bff;
+    }
+
+    .nav-tabs .nav-link:hover {
+      color: #007bff;
+      border-bottom: 3px solid #aaa;
+    }
+
+    /* Variable table */
+    .variable-table {
+      margin: 2rem 0;
+    }
+
+    .variable-table table {
+      width: 100%;
+    }
+
+    .variable-table th {
+      background-color: #f8f9fa;
+      color: #404040;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      border: 1px solid #ddd;
+    }
+
+    .variable-table td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: center;
+      color: #404040;
+    }
+
+    .variable-table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    /* Details/Summary */
+    details {
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #007bff;
+      padding: 0.5rem;
+    }
+
+    summary:hover {
+      color: #0056b3;
+    }
+
+    .model-description {
+      margin-top: 1rem;
+    }
+
+    .math-notation {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    /* Horizontal rules */
+    hr {
+      margin: 2rem 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Links */
+    a {
+      color: #007bff;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    /* Responsive design */
+    @media (max-width: 992px) {
+      .toc-sidebar {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .content-with-toc {
+        padding-right: 20px;
+      }
+    }
+
+    /* Chart notes */
+    .chart-notes {
+      color: #6c757d;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    $(document).ready(function () {
+      $("#nav-placeholder").load("components/nav.html", function (response, status, xhr) {
+        if (status == "error") {
+          console.error("Error loading navigation:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>International House Price Nowcast</h1>
+      <h4>IHO Forecast Report</h4>
+    </div>
+  </div>
+
+  <!-- Sidebar TOC -->
+  <div class="toc-sidebar d-none d-lg-block">
+    <h4>Table of Contents</h4>
+    <ul>
+      <li><a href="#overview" class="toc-link">Overview</a></li>
+      <li><a href="#variables" class="toc-link">Variables</a></li>
+      <li><a href="#model" class="toc-link">Model</a></li>
+      <li><a href="#forecast" class="toc-link">Forecast</a></li>
+      <li><a href="#validation" class="toc-link">Validation</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container content-with-toc">
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+      <h2>Overview</h2>
+      <hr>
+      <p>
+        The purpose of this analysis is to provide timely updates of the real house prices in different countries.
+        The publication lag of the <a href="https://www.dallasfed.org/research/international/houseprice"
+          target="_blank">International
+          House Price Database (Dallas Fed)</a> used in the <a href="https://int.housing-observatory.com/index.html"
+          target="_blank">International
+          Housing Observatory (IHO)</a> is of around 3 months. This presents an opportunity to forecast the current
+        quarter
+        using higher frequency data (i.e., monthly indicators). As such, the <a
+          href="https://int.housing-observatory.com/reports.html" target="_blank">IHO Global
+          Housing Outlook reports</a>, which analyze the latest house price data release, provides a combination of
+        recent
+        trends with an updated assessment of house price developments based on model estimations.
+      </p>
+    </section>
+
+    <!-- Variables Section -->
+    <section id="variables" class="content-section">
+      <h2>Variables</h2>
+      <hr>
+      <p>
+        The model variables are divided into quarterly and monthly series. When needed, variables are seasonally
+        adjusted with X13-ARIMA-SEATS and transformed to be in terms of period-on-period log growth rates. The
+        following table describes the scope of the analysis for the <strong>US</strong>:
+      </p>
+
+      <div class="variable-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Mnemonic</th>
+              <th>Variable Description</th>
+              <th>Sector</th>
+              <th>Type</th>
+              <th>Frequency</th>
+              <th>SA</th>
+              <th>DIFF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RHPI</td>
+              <td>Real House Price Index</td>
+              <td>Housing</td>
+              <td>Hard</td>
+              <td>Q</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>GDP</td>
+              <td>Real GDP</td>
+              <td>Activity</td>
+              <td>Hard</td>
+              <td>Q</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>ASP</td>
+              <td>Average Sales Price for New Houses Sold</td>
+              <td>Housing</td>
+              <td>Hard</td>
+              <td>M</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>PER</td>
+              <td>Number of Permits for New Privately-owned Single-family Houses</td>
+              <td>Housing</td>
+              <td>Hard</td>
+              <td>M</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>HOU</td>
+              <td>Number of New Privately-owned Single-family Houses Started</td>
+              <td>Housing</td>
+              <td>Hard</td>
+              <td>M</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>HSN</td>
+              <td>Number of New One-family Houses Sold</td>
+              <td>Housing</td>
+              <td>Hard</td>
+              <td>M</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Transformed Variables for Model</h3>
+
+      <!-- Tabs for Quarterly and Monthly -->
+      <ul class="nav nav-tabs" id="variablesTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="quarterly-tab" data-toggle="tab" href="#quarterly" role="tab">Quarterly</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="monthly-tab" data-toggle="tab" href="#monthly" role="tab">Monthly</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="variablesTabsContent">
+        <div class="tab-pane fade show active" id="quarterly" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/Model_variablesQ_spec4.png" alt="Quarterly Variables">
+            <p class="chart-notes">Source: Dallas Fed International House Price Database, FRED, and own calculations.
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="monthly" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/Model_variablesM_spec4.png" alt="Monthly Variables">
+            <p class="chart-notes">Source: Dallas Fed International House Price Database, FRED, and own calculations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Model Section -->
+    <section id="model" class="content-section">
+      <h2>Model</h2>
+      <hr>
+      <p>
+        The main forecasting model is a mixed-frequency dynamic factor model estimated with classical methods (nowcast).
+        The benchmarks to beat are (i) a random walk (RW), (ii) an autoregressive model of order 1 (AR1).
+      </p>
+
+      <details>
+        <summary>Model Description</summary>
+        <div class="model-description">
+          <p>
+            For illustration purposes the following equations describe a simplified mixed-frequency dynamic factor
+            model (i.e., 1 quarterly and 2 monthly variables):
+          </p>
+
+          <h4>Notation:</h4>
+          <ul>
+            <li>\( x_{Q,t} \) = target quarterly frequency variable with month-to-quarter growth rate mapping
+              measured in months.</li>
+            <li>\( x_{M,t} \) = target quarterly frequency variables measured in months.</li>
+            <li>\( y_{M_j,t} \) = j-th monthly frequency variables measured in months.</li>
+          </ul>
+
+          <h4>DFM equations:</h4>
+          <div class="math-notation">
+            \begin{align*}
+            x_{Q,t} &= \frac{1}{3}x_{M,t} + \frac{2}{3}x_{M,t-1} + x_{M,t-2} + \frac{2}{3}x_{M,t-3} +
+            \frac{1}{3}x_{M,t-4}, \\
+            x_{M,t} &= \gamma_{M,t} f_t + e_{M,t}, \\
+            x_{Q,t} &= \frac{1}{3} \gamma_{M} f_{t} + \frac{2}{3} \gamma_{M} f_{t-1} + \gamma_{M} f_{t-2} +
+            \frac{2}{3} \gamma_{M} f_{t-3} + \frac{1}{3} \gamma_{M} f_{t-4} \\
+            &+ \frac{1}{3} e_{M,t} + \frac{2}{3} e_{M,t-1} + e_{M,t-2} + \frac{2}{3} e_{M,t-3} + \frac{1}{3}
+            e_{M,t-4}, \\
+            y_{M_1,t} &= \gamma_{M_1,t} f_t + e_{M_1,t}, \\
+            y_{M_2,t} &= \gamma_{M_2,t} f_t + e_{M_2,t}, \\
+            f_{t} &= \phi_1 f_{t-1} + \phi_2 f_{t-2} + \varepsilon_{f,t}, \quad \varepsilon_{f,t} \sim N(0, 1), \\
+            e_{j,t} &= \psi_{j,1} e_{j,t-1} + \psi_{j,2} e_{j,t-2} + \eta_{j,t}, \quad \eta_{j,t} \sim N(0,
+            \sigma^2_{\eta_j}), \quad j = M, M_1, M_2.
+            \end{align*}
+          </div>
+
+          <h4>State-space representation:</h4>
+
+          <p><strong>Measurement equation</strong> \(\rightarrow\) \( y_t = H' h_t \):</p>
+          <div class="math-notation">
+            \[
+            \begin{bmatrix}
+            x_{Q,t} \\
+            y_{M_1,t} \\
+            y_{M_2,t}
+            \end{bmatrix} =
+            \begin{bmatrix}
+            \frac{1}{3} \gamma_M & \frac{2}{3} \gamma_M & \gamma_M & \frac{2}{3} \gamma_M & \frac{1}{3} \gamma_M &
+            \frac{1}{3} & \frac{2}{3} & 1 & \frac{2}{3} & \frac{1}{3} & 0 & 0 & 0 & 0 \\
+            \gamma_{M_1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+            \gamma_{M_2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0
+            \end{bmatrix}
+            \begin{bmatrix}
+            f_{t} \\
+            f_{t-1} \\
+            f_{t-2} \\
+            f_{t-3} \\
+            f_{t-4} \\
+            e_{M,t} \\
+            e_{M,t-1} \\
+            e_{M,t-2} \\
+            e_{M,t-3} \\
+            e_{M,t-4} \\
+            e_{M_1,t} \\
+            e_{M_1,t-1} \\
+            e_{M_2,t} \\
+            e_{M_2,t-1}
+            \end{bmatrix}
+            \]
+          </div>
+
+          <p><strong>Transition equation</strong> \(\rightarrow\) \( h_t = F h_{t-1} + v_t \):</p>
+          <div class="math-notation">
+            \[
+            \begin{bmatrix}
+            f_{t} \\
+            f_{t-1} \\
+            f_{t-2} \\
+            f_{t-3} \\
+            f_{t-4} \\
+            e_{M,t} \\
+            e_{M,t-1} \\
+            e_{M,t-2} \\
+            e_{M,t-3} \\
+            e_{M,t-4} \\
+            e_{M_1,t} \\
+            e_{M_1,t-1} \\
+            e_{M_2,t} \\
+            e_{M_2,t-1}
+            \end{bmatrix} =
+            \begin{bmatrix}
+            \phi_1 & \phi_2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & \psi_{M,1} & \psi_{M,2} & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \psi_{M_1,1} & \psi_{M_1,2} & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \psi_{M_2,1} & \psi_{M_2,2}\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0
+            \end{bmatrix}
+            \begin{bmatrix}
+            f_{t-1} \\
+            f_{t-2} \\
+            f_{t-3} \\
+            f_{t-4} \\
+            f_{t-5} \\
+            e_{M,t-1} \\
+            e_{M,t-2} \\
+            e_{M,t-3} \\
+            e_{M,t-4} \\
+            e_{M,t-5} \\
+            e_{M_1,t-1} \\
+            e_{M_1,t-2} \\
+            e_{M_2,t-1} \\
+            e_{M_2,t-2}
+            \end{bmatrix} +
+            \begin{bmatrix}
+            \varepsilon_{f,t} \\
+            0 \\
+            0 \\
+            0 \\
+            0 \\
+            \eta_{M,t} \\
+            0 \\
+            0 \\
+            0 \\
+            0 \\
+            \eta_{M_1,t} \\
+            0 \\
+            \eta_{M_2,t} \\
+            0
+            \end{bmatrix}
+            \]
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- Forecast Section -->
+    <section id="forecast" class="content-section">
+      <h2>Forecast</h2>
+      <hr>
+
+      <!-- Tabs for DFM and AR -->
+      <ul class="nav nav-tabs" id="forecastTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="dfm-forecast-tab" data-toggle="tab" href="#dfm-forecast" role="tab">Dynamic
+            Factor Model</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="ar-forecast-tab" data-toggle="tab" href="#ar-forecast" role="tab">Autoregressive
+            Model</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="forecastTabsContent">
+        <div class="tab-pane fade show active" id="dfm-forecast" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/DFM_forecast_spec4.png" alt="DFM Forecast">
+            <p class="chart-notes">Note: Confidence intervals are computed using Wild boostraps with Rademacher
+              multipliers.</p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ar-forecast" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/AR_forecast.png" alt="AR Forecast">
+            <p class="chart-notes">Note: Confidence intervals are computed in a standard way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Validation Section -->
+    <section id="validation" class="content-section">
+      <h2>Validation</h2>
+      <hr>
+      <p>
+        The model validation comprises two exercises. The first one is the in-sample comparison between the observed
+        target variable and the predicted values from the respective model.
+      </p>
+      <p>
+        The second exercise is more relevant for forecasting purposes. For the periods 2015Q1-2025Q1 each of the
+        competing
+        models is estimated and then used to forecast the target variable 1-step ahead. The forecast value is compared
+        to
+        the actual observation that period. For example, in the first iteration the model is estimated until 2015Q1 to
+        forecast 2015Q2. Then, the forecast for 2015Q2 is compared to the 2015Q2 observation. This is done iteratively
+        on
+        an expanding window up to the last estimation period of 2024Q4. The forecast accuracy metric is the root mean
+        squared
+        error (RMSE) where lower values indicate a more accurate forecast (i.e., smaller forecast error). This is a
+        pseudo
+        out-of-sample exercise since revised data is used which might be different from the information the forecaster
+        had
+        at the time of doing the forecast.
+      </p>
+
+      <h3>In-sample</h3>
+      <hr>
+
+      <h4>Dynamic Factor Model</h4>
+
+      <!-- Tabs for In-sample validation -->
+      <ul class="nav nav-tabs" id="insampleTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="dfm-insample-q-tab" data-toggle="tab" href="#dfm-insample-q"
+            role="tab">Quarterly</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="dfm-insample-m-tab" data-toggle="tab" href="#dfm-insample-m" role="tab">Monthly</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="insampleTabsContent">
+        <div class="tab-pane fade show active" id="dfm-insample-q" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/DFM_fit_spec4.png" alt="DFM In-sample Fit">
+          </div>
+        </div>
+        <div class="tab-pane fade" id="dfm-insample-m" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/Compare_factor_esimatedTarget_spec4.png" alt="Factor Comparison">
+          </div>
+        </div>
+      </div>
+
+      <h4>Autoregressive Model</h4>
+      <div class="chart-container">
+        <img src="nowcasting/charts/AR_fit.png" alt="AR In-sample Fit">
+      </div>
+
+      <h3>Pseudo Out-of-sample</h3>
+      <hr>
+
+      <h4>Comparison RMSE</h4>
+
+      <!-- Tabs for Out-of-sample validation -->
+      <ul class="nav nav-tabs" id="oosampleTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="rmse-iter-tab" data-toggle="tab" href="#rmse-iter" role="tab">Iterations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="rmse-box-tab" data-toggle="tab" href="#rmse-box" role="tab">Boxplot</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="oosampleTabsContent">
+        <div class="tab-pane fade show active" id="rmse-iter" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/RMSE_evolution_spec4.png" alt="RMSE Evolution">
+          </div>
+        </div>
+        <div class="tab-pane fade" id="rmse-box" role="tabpanel">
+          <div class="chart-container">
+            <img src="nowcasting/charts/RMSE_boxplot_spec4.png" alt="RMSE Boxplot">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    $(document).ready(function () {
+      $("#footer-placeholder").load("components/footer.html", function (response, status, xhr) {
+        if (status == "error") {
+          console.error("Error loading footer:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+
+    // Active TOC link on scroll
+    $(window).scroll(function () {
+      var scrollPos = $(document).scrollTop();
+      $('.toc-link').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top - 150 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+          $('.toc-link').removeClass("active");
+          currLink.addClass("active");
+        }
+      });
+    });
+
+    // Smooth scrolling for TOC links
+    $('.toc-link').on('click', function (e) {
+      e.preventDefault();
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - 100
+        }, 500);
+      }
+    });
+  </script>
+</body>
+
+</html>
