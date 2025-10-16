@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Resources | International Housing Observatory</title>
+  <title>Report Q3 2025 | International Housing Observatory</title>
 
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/style-generic.css">
@@ -70,13 +70,59 @@
   <div id="nav-placeholder"></div>
   <script>
     $(function () {
-      $("#nav-placeholder").load("../nav.html");
+      $("#nav-placeholder").load("../components/nav.html");
     });
   </script>
 
   <!--Main body-->
+  <div class=" container-fluid" style="padding-bottom: 4rem;">
+    <iframe id="report-iframe" src="versions/2025q3/report.html" scrolling="no" style="display: block;
+    border: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    padding-top: 2rem;
+    margin: 0;
+    overflow: hidden;"></iframe>
+  </div>
 
-  {{{content}}}
+  <script>
+    // Dynamically resize iframe based on content
+    function resizeIframe() {
+      var iframe = document.getElementById('report-iframe');
+      try {
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        var height = iframeDoc.body.scrollHeight;
+        iframe.style.height = (height + 50) + 'px';
+      } catch (e) {
+        // Fallback if cross-origin restrictions apply
+        iframe.style.height = '100vh';
+      }
+    }
+
+    // Resize on load
+    document.getElementById('report-iframe').onload = function () {
+      resizeIframe();
+      // Also resize after a short delay to ensure content is fully rendered
+      setTimeout(resizeIframe, 500);
+      setTimeout(resizeIframe, 1000);
+    };
+
+    // Resize on window resize
+    window.addEventListener('resize', resizeIframe);
+  </script>
+
+  <!-- <div class="container"> -->
+
+
+
+  <!--Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("../components/footer.html");
+    });
+  </script>
 
 
 </body>
