@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "Persistent House Price Growth Tightens the Affordability Constraint",
+            "quarter": "Q3 2025",
+            "publish_date": "16/10/2025",
+            "description": "Global housing markets continued to expand in the second quarter of 2025, with widening disparities in affordability across countries.",
+            "excerpt": " While overall affordability remained broadly stable, this aggregate picture conceals significant national differences. Pressures intensified in Spain, Portugal, and the Netherlands, where affordability worsened further, whereas South Korea, the United Kingdom, France, and Canada experienced continued improvements. In addition, real rents rose in most advanced economies, led by Belgium, Canada, and Portugal, highlighting persistent supply constraints in rental markets.",
+            "link": "/reports/2025q3.html"
+        },
+        {
             "title": "Nominal Prices Up, Access Down: The Global Housing Market at a Crossroads",
             "quarter": "Q2 2025",
             "publish_date": "15/07/2025",
