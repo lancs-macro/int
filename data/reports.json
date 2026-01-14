@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "Housing Gets Pricier Worldwide, Three Countries Lead the Way",
+            "quarter": "Q4 2025",
+            "publish_date": "15/01/2026",
+            "description": "Property prices continue to rise in the third quarter of 2025, driven by three countries that push up the world aggregate.",
+            "excerpt": " Housing conditions tightened further in Portugal, Spain, the Netherlands, and Croatia, while nominal house price growth moderated relative to the previous quarter and affordability stalled across most other countries. In contrast, affordability in Canada improved markedly, supported by lower nominal house prices and rising disposable income. Countries facing mounting housing market pressures are announcing and implementing policies aimed at easing supply-side constraints, including support for new construction and efforts to expand the effective supply of rental housing.",
+            "link": "/reports/2025q4.html"
+        },
+        {
             "title": "Persistent House Price Growth Tightens the Affordability Constraint",
             "quarter": "Q3 2025",
             "publish_date": "16/10/2025",
