@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "A 20-Year Affordability Reset as Price Pressures Persist",
+            "quarter": "Q1 2026",
+            "publish_date": "18/04/2026",
+            "description": "Global housing affordability now stands at levels comparable to those of the 2005 peak, as house prices and incomes have risen by broadly similar magnitudes over two decades.",
+            "excerpt": "Portugal, Spain, and Croatia continue to experience strong house price growth, with affordability increasingly stretched. Nominal rents continue to rise—led by the Netherlands, Canada, and Portugal. Our nowcast for US real property prices points to a 0.6 percent quarterly contraction ahead, consistent with a post-peak levelling off following the 2025 high.",
+            "link": "/reports/2026q1.html"
+        },
+        {
             "title": "Housing Gets Pricier Worldwide, Three Countries Lead the Way",
             "quarter": "Q4 2025",
             "publish_date": "15/01/2026",
