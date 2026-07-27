@@ -1,0 +1,76 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Price Growth Persists, Affordability Diverges, Policy Responds
+
+<h3 style="color:grey;">
+  2026Q2 IHO Global Housing Outlook
+</h3>
+
+### Executive Summary
+
+**Global house prices continued to increase, rising 1 percent quarter-on-quarter (QoQ) at the start of 2026, 0.3 percentage points more than the previous quarter.** Portugal, Spain, and Croatia remain the clear outliers on the upside in both nominal and real terms, while Finland, the U.S., and the U.K. posted modest declines. Our nowcast points to a further, broadly similar contraction in U.S. real property prices of 0.3 percent QoQ next quarter, following a 0.4 percent decline in the latest release.
+
+Aggregate housing affordability held broadly stable, tightening only 0.1 percent QoQ. This apparent stability, however, masks widening differences across countries. Falling incomes combined with rapid house-price growth produced some of the sharpest deteriorations in Portugal and Spain, while Ireland and Finland recorded the largest improvements. Nominal rents rose further across most markets, led by Sweden, Portugal, and Colombia, though the increases were largely inflation-driven, with real rents falling in most countries.
+
+Policymakers are increasingly favoring structural, supply-side measures over demand management. The United States enacted sweeping federal housing legislation alongside FHA underwriting reforms, Spain committed €7 billion to its 2026–2030 State Housing Plan and introduced permanent protections for subsidized housing, and Croatia launched incentives to bring vacant units into the rental market.
+
+<!-- <center> -->
+
+<!-- ```{r, out.width="70%", out.height="70%"} -->
+<!-- #knitr::include_graphics("E:/1_PROJECTS/IHO/IHO_26Q1/Chart_IHO2026Q1.png")  # adapt path -->
+<!-- #knitr::include_graphics("./Chart_IHO2026Q1.png")   -->
+<!-- ```  -->
+<!-- </center> -->
+
+### Economic Indicators
+
+**Economic activity through the first half of 2026 has held up better than feared, but the picture has shifted markedly.** The outbreak and intensification of war in the Middle East delivered a severe energy supply shock, erasing the previously expected growth upside and pushing inflation materially higher. The resulting jump in energy prices has revived tensions between <a href="https://www.dallasfed.org/research/international/dgei/gdp" target="_blank">growth</a> and <a href="https://www.dallasfed.org/research/international/dgei/cpi" target="_blank">inflation</a>, with uncertainty still elevated with on-and-off de-escalations. 
+
+<a href="https://www.dallasfed.org/research/international/dgei/policy" target="_blank">Central banks</a> have shifted from monetary easing to a more defensive stance. The ECB and the Bank of Japan raised policy rates by 25 basis points in June, while the Federal Reserve and the Bank of England have kept rates unchanged. Monetary authorities closely monitor the pass-through of higher energy prices to inflation and to calibrate their policy responses accordingly.
+
+
+### Global Property Prices and Trends
+
+#### No signs of a break
+
+Global house prices continued rising by 1 percent QoQ at the start of 2026, 0.3 percentage points (pp) more than last quarter. 
+
+There is no sign of a break in the heated house markets of Portugal, Spain, and Croatia. Once more, these three countries lead the board in house price gains, both in nominal and real terms. Quarterly nominal property prices rose 4.3 percent for Portugal, 3.6 percent for Spain, and 3.3 percent for Croatia. In turn, nominal house prices decreased the most in Finland (-1.5 percent QoQ) whereas the United States and United Kingdom experienced a modest decline (-0.4 and -0.7 percent QoQ, respectively).  
+
+*Exuberance analysis*
+
+The latest quarterly assessment by the International Housing Observatory continues to indicate that housing-market exuberance is concentrated in a few economies rather than being widespread. 
+
+Portugal remains the clearest case, exhibiting persistent signs of exuberance in both real house prices and the price-to-income ratio. Croatia now also displays sustained exuberance in real house prices, although the absence of a corresponding signal in its price-to-income ratio suggests that the evidence is weaker than in Portugal. Despite continued rapid price growth, Spain does not currently exhibit exuberance under either measure. Similarly, there is no current evidence of overheating in the U.S., where earlier pressures appear to have receded. Neither of the aggregate indicators signals global exuberance. Overall, risks remain contained at the global level, but the persistence of the signals in Portugal and Croatia warrants continued close monitoring.
+
+*Nowcast analysis*
+
+The latest U.S. real property price data, showing a quarterly decline of 0.4 percent, was broadly in line with our previous nowcast. Our updated nowcast points to a similar contraction of 0.3 percent QoQ in the upcoming release. High-frequency monthly estimates suggest a less pronounced decline in April and May, before indicating a renewed and persistent deceleration over the subsequent months.
+
+
+#### Affordability stabilizes, except for the usuals
+
+The house price to income ratio, reflecting housing affordability, remained stable globally. Nominal personal income grew at almost the same pace as property prices, hence, affordability only tightened by 0.1 percent QoQ.
+
+As in the previous quarter, Portugal and Spain recorded substantial declines in personal income. Combined with sustained rapid house price growth, this has significantly worsened housing affordability, further constraining prospective homebuyers (+4.9 and +4 percent QoQ, respectively). The higher growth in personal income is serving as a counterbalance for Croatia, where affordability tightened less (+2 percent QoQ). By contrast, Ireland (-1.4 percent) and Finland (-1.2 percent) recorded the largest quarterly improvement in affordability. In the U.S., housing became more attainable by 0.6 percent QoQ, and the U.K. saw a slight worsening (+0.2 percent QoQ).
+
+#### Rents mostly rise due to inflation
+
+Sweden recorded the most pronounced rise in quarterly nominal rents (+1.5 percent), followed by Portugal (+1.4 percent), and Colombia (+1.2 percent). Spanish tenants also faced higher costs with rents increasing by 0.6 percent in nominal terms. For the U.K. and the U.S. rent prices shot up by 0.9 and 0.6 percent QoQ, respectively. Nonetheless, most of this increase is driven by inflation as real rents fell for most countries. 
+
+### Selected Housing Policies and Regulations
+
+**United States**: The government enacted the 21st Century ROAD to Housing Act 2026, which represents the most significant federal housing reform in decades, focusing on expanding housing supply through reduced regulatory barriers, streamlined permitting, modernization of HUD programs, manufactured housing reforms, and incentives for local governments to increase residential construction. The legislation aims to improve long-term housing affordability by addressing structural supply constraints rather than relying primarily on demand-side support. Complementing these reforms, the FHA Single-Family Mortgage Program announced a package of administrative updates, simplifying underwriting, appraisal, and loan administration requirements to reduce compliance costs, improve operational efficiency, and facilitate access to FHA-insured mortgage financing.
+
+**Spain**: Spain's 2026–2030 State Housing Plan allocates €7 billion to expand the supply of affordable housing through increased public investment, rental assistance, housing rehabilitation, and urban regeneration, while improving access for young and vulnerable households. Complementing this initiative, the Government introduced permanent protection for newly developed publicly subsidized housing (“Vivienda Protegida”), preventing its conversion to market-rate housing and preserving the long-term stock of affordable homes. Together, these measures reflect a structural supply-side strategy aimed at enhancing housing affordability, increasing the availability of public housing, and reducing speculative pressures in the residential market.
+
+**Croatia**: The government announced the Affordable Rental Housing Programme that aims to increase the supply of long-term rental housing by incentivizing owners of vacant dwellings to lease their properties through a government-backed scheme. Implemented under the Affordable Housing Act, the programme seeks to improve housing affordability by activating underutilized housing stock, expanding rental market supply, and complementing broader measures to support first-time homebuyers and moderate pressures from short-term rentals.
+

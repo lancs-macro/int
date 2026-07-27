@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "Price Growth Persists, Affordability Diverges, Policy Responds",
+            "quarter": "Q2 2026",
+            "publish_date": "28/07/2026",
+            "description": "Global house prices continued to rise in the first quarter of 2026, while affordability trends increasingly diverge across countries.",
+            "excerpt": "Portugal, Spain, and Croatia remain the clear outliers on the upside in both nominal and real terms, while Finland, the U.S., and the U.K. posted modest declines. Aggregate affordability held broadly stable, but this masks widening differences across countries, with the sharpest deteriorations in Portugal and Spain and the largest improvements in Ireland and Finland. Nominal rents rose further across most markets, led by Sweden, Portugal, and Colombia, though the increases were largely inflation-driven.",
+            "link": "/reports/2026q2.html"
+        },
+        {
             "title": "A 20-Year Affordability Reset as Price Pressures Persist",
             "quarter": "Q1 2026",
             "publish_date": "18/04/2026",
