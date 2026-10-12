@@ -229,6 +229,112 @@
       }
     }
 
+    .variable-table td.fc {
+      background-color: #e9ecef;
+      font-style: italic;
+    }
+
+    /* Model Documentation toggle: soft grey card with hover */
+    #model-documentation {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0;
+      border: 0;
+    }
+
+    #model-documentation > summary {
+      position: relative;
+      list-style: none;
+      padding: 1.25rem 4rem 1.25rem 1.5rem;
+      background-color: #f2f2f2;
+      border-radius: 6px;
+      color: #404040;
+      font-size: 1.6rem;
+      font-weight: 600;
+      transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    #model-documentation > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #model-documentation > summary:hover {
+      background-color: #e6e6e6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transform: translateY(-1px);
+      color: #000;
+    }
+
+    #model-documentation > summary::after {
+      content: "+";
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      width: 2rem;
+      height: 2rem;
+      margin-top: -1rem;
+      line-height: 2rem;
+      text-align: center;
+      font-size: 1.4rem;
+      color: #fff;
+      background-color: #6c6c6c;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    #model-documentation > summary:hover::after {
+      background-color: #404040;
+    }
+
+    #model-documentation[open] > summary::after {
+      content: "−";
+    }
+
+    .doc-hint {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #6c757d;
+    }
+
+    /* open: the whole block becomes one grey panel so the content belongs to the header */
+    #model-documentation[open] {
+      background-color: #f2f2f2;
+      border-radius: 6px;
+      padding-bottom: 1.5rem;
+    }
+
+    #model-documentation[open] > summary,
+    #model-documentation[open] > summary:hover {
+      background-color: transparent;
+      box-shadow: none;
+      transform: none;
+    }
+
+    #model-documentation[open] > section {
+      margin: 0 1.5rem;
+      padding: 1.5rem 0 0;
+      max-width: none;
+    }
+
+    #model-documentation[open] > section + section {
+      border-top: 1px solid #d9d9d9;
+      margin-top: 1.5rem;
+    }
+
+    #model-documentation[open] > section > hr {
+      display: none;
+    }
+
+    #model-documentation .table,
+    #model-documentation details {
+      background-color: #fff;
+    }
+
+    #model-documentation[open] > summary .doc-hint {
+      display: none;
+    }
+
     /* Chart notes */
     .chart-notes {
       color: #6c757d;
@@ -236,6 +342,7 @@
       font-style: italic;
       margin-top: 0.5rem;
     }
+
   </style>
 </head>
 
@@ -256,7 +363,6 @@
   <div class="jumbotron text-center">
     <div class="container">
       <h1>International House Price Nowcast</h1>
-      <h4>IHO Forecast Report</h4>
     </div>
   </div>
 
@@ -283,6 +389,34 @@
         trends with an updated assessment of house price developments based on model estimations.
       </p>
     </section>
+
+    <!-- Latest US Nowcast -->
+    <section id="latest-nowcast" class="content-section">
+      <h2>Latest U.S. Nowcast</h2>
+      <hr>
+      <div class="chart-container">
+        <img src="nowcasting/charts/DFM_forecast_US_26Q3.png" alt="Latest U.S. Nowcast">
+      </div>
+      <div class="variable-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Real property prices (log growth rates in %)</th>
+              <th>Jun-26</th><th>Jul-26</th><th>Aug-26</th><th>Sep-26</th><th>Oct-26</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Lower 95% confidence interval</td><td>-0.46</td><td class="fc">-1.68</td><td class="fc">-1.86</td><td class="fc">-1.80</td><td class="fc">-1.74</td></tr>
+            <tr><td>Point forecast</td><td>-0.46</td><td class="fc">-0.58</td><td class="fc">-0.46</td><td class="fc">-0.25</td><td class="fc">-0.18</td></tr>
+            <tr><td>Upper 95% confidence interval</td><td>-0.46</td><td class="fc">0.47</td><td class="fc">0.90</td><td class="fc">1.27</td><td class="fc">1.52</td></tr>
+          </tbody>
+        </table>
+        <p class="chart-notes">Shaded italic cells are forecasts.</p>
+      </div>
+    </section>
+
+    <details id="model-documentation">
+      <summary>Model Documentation<span class="doc-hint">Variables, model description, forecasts and validation &mdash; click to expand</span></summary>
 
     <!-- Variables Section -->
     <section id="variables" class="content-section">
@@ -668,6 +802,8 @@
         </div>
       </div>
     </section>
+
+    </details>
 
   </div>
 
