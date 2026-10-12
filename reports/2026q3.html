@@ -98,6 +98,10 @@
     // Resize on load
     document.getElementById('report-iframe').onload = function () {
       resizeIframe();
+      // Follow any later layout change (image decode, font swap) instead of guessing delays
+      try {
+        new ResizeObserver(resizeIframe).observe(this.contentDocument.body);
+      } catch (e) { }
       // Also resize after a short delay to ensure content is fully rendered
       setTimeout(resizeIframe, 500);
       setTimeout(resizeIframe, 1000);
