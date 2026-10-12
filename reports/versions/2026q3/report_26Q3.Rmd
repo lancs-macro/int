@@ -1,0 +1,83 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Global Housing's Double Squeeze: High House Prices Meet Rising Inflation
+
+<h3 style="color:grey;">
+  2026Q3 IHO Global Housing Outlook
+</h3>
+
+### Executive Summary
+
+**Global housing markets are entering a more challenging phase, with households facing a double squeeze from persistently high housing costs and renewed inflationary pressures.** House prices remain elevated by historical standards across many countries, with several markets continuing to experience rapid price growth. In the second quarter of 2026, global nominal house prices increased by 0.7 percent quarter-on-quarter (QoQ) and 3.2 percent year-on-year (YoY). Renewed inflationary pressures pushed real house prices down by 0.5 percent QoQ, reducing house prices relative to the overall cost of goods and services. However, inflation also eroded households' purchasing power, leaving less income available to meet housing expenses. Thus, despite declining real house prices, housing remains expensive, while rising everyday living costs put further pressure on household budgets.
+
+The global house price-to-income ratio remained broadly unchanged over the last quarter, but there are significant differences across countries. Affordability continues to deteriorate sharply in Portugal, Croatia, and Spain, with the latter experiencing an 8.8 percent increase in its house price-to-income ratio over the past year. In contrast, Australia, Israel, France, and Canada have seen some improvements.
+
+**Looking ahead, renewed inflationary pressures are reshaping the monetary policy outlook.** As central banks increasingly move away from interest rate cuts toward maintaining or raising policy rates, tighter financing conditions are likely to dampen housing demand and put downward pressure on house prices. However, higher borrowing costs may also make home ownership more expensive, adding another challenge for households seeking to enter the housing market.
+
+**Housing affordability is also moving to the centre of the European policy agenda.** The European Commission's Affordable Housing Act package introduces a common, data-driven framework for identifying areas experiencing housing stress and guiding policy responses. Importantly, it recognises the house price-to-income ratio as a key measure of housing affordability, alongside other indicators. This is also one of the central indicators monitored by the IHO, highlighting the growing importance of evidence-based assessments in housing policy.
+
+At the national level, governments are pursuing different approaches to housing pressures, ranging from tighter rent regulation in Spain to the relaxation of certain rental restrictions in Portugal and the taxation of underused properties in Croatia. Overall, global housing markets face a difficult combination of elevated housing costs, renewed inflationary pressures, and potentially tighter financing conditions. Even where real house prices decline, the financial strain on households may persist, making housing affordability one of the defining economic challenges ahead.
+
+<center>
+
+```{r, out.width="70%", out.height="70%"}
+# knitr::include_graphics("D:/1_PROJECTS/IHO/IHO_26Q3/Chart_IHO2026Q3.png")  # adapt path
+knitr::include_graphics("./Chart_IHO2026Q3.png")
+```
+</center>
+
+### Economic Indicators
+
+**The macroeconomic picture was broadly unchanged in the third quarter of 2026.** Geopolitical tensions and rising price pressures continued to cloud an already uncertain economic landscape, weighing on living standards. <a href="https://www.dallasfed.org/research/international/dgei/gdp" target="_blank">Growth</a> held steady, but the risks are increasingly skewed to the downside. <a href="https://www.dallasfed.org/research/international/dgei/cpi" target="_blank">Inflation</a> is starting to pick up, forcing central banks to reassess their policy stance.
+
+A broad tightening cycle is taking hold, as a growing number of <a href="https://www.dallasfed.org/research/international/dgei/policy" target="_blank">central banks</a> pivot away from rate cuts and toward maintaining or increasing policy rates. The ECB and the Bank of Japan set the tone in June and September, followed by the Federal Reserve. The Bank of England maintained a steady rate. Some emerging economies are maintaining high interest rates or are starting to hike. Energy-driven inflation is the common catalyst: with higher energy prices still feeding through to consumer prices, monetary authorities are increasingly leaning toward further tightening to keep expectations anchored.
+
+
+### Global Property Prices and Trends
+
+#### A double-edged sword
+
+Global nominal house prices rose by 0.7 percent QoQ and 3.2 percent YoY in the second quarter of 2026, down from 1 percent and 3.4 percent respectively in the previous quarter, indicating a slower pace of growth. This strain on households is aggravated by the inflationary pressures building up in consumer prices due to the current geopolitical context. After adjusting for inflation, prices fell by 0.5 percent QoQ and 0.4 percent YoY, something not seen since the end of 2023.
+
+The housing market on a disaggregated country level shows a heterogeneous picture. Portugal and Croatia keep having the largest surges in nominal and real property prices (3.5 and 3.4 percent QoQ and 18.8 and 14.4 percent YoY in nominal terms, respectively). Then, nominal house prices keep rising but, when taking into account the inflationary effects from consumer prices, most of the countries experienced a decrease in real house prices. 18 out of 26 countries in our pool reported quarterly drops in real property prices with Israel (2.1 percent), France (2 percent), Finland (1.4 percent), and Australia (1.4 percent) standing out. Spain’s house prices rose by 0.3 percent quarterly and 9 percent annually in real terms whereas for the U.K. prices stalled and, in the U.S., they decreased by 0.5 percent QoQ and 0.6 percent YoY.
+
+
+*Exuberance analysis*
+
+House prices remain elevated by historical standards across many economies, including Switzerland, the United States, Norway, the Netherlands, Australia, and Ireland. However, high house price levels do not necessarily imply market exuberance, which is associated with unusually rapid and persistent price increases. The latest quarterly assessment by the International Housing Observatory indicates that such exuberant dynamics remain concentrated in a relatively small group of countries rather than being widespread. Portugal remains a prominent case, exhibiting persistent signs of exuberance in real house prices since early 2023 and in the price-to-income ratio since late 2024. Slovenia also displays evidence of exuberance across both measures, while Croatia continues to exhibit strong and persistent exuberance in real house prices, but not in its price-to-income ratio. Spain has recently begun to show signs of exuberance in real house prices, although there is no corresponding signal in its price-to-income ratio. By contrast, there is no current evidence of positive exuberance in the U.S. or U.K., and neither of the aggregate indicators signals global exuberance. Overall, the evidence suggests that housing-market exuberance remains concentrated rather than representing a widespread global phenomenon.
+
+*Nowcast analysis*
+
+Our latest nowcast for the U.S. real property prices points towards a continued decline next quarter (2026 Q3). The new 0.25 percent QoQ decline for the upcoming quarter is somewhat less contractionary compared to the latest observed data (-0.5 percent QoQ). This less negative profile is backed by monthly high-frequency estimates that signal a smaller decline in prices over future months.
+
+#### Nuanced affordability improvement
+
+Whilst real property prices fell broadly so did real personal income but at a slower pace. Accordingly, the house price-to-income ratio shows indications of more affordable housing (0.5 percent QoQ and 0.6 percent YoY). Still, increasing consumer prices are eroding household’s disposable income which ultimately affect their spending allocation towards housing.
+
+Countries such as Australia, Israel, France, or Canada lead the pack on the improved affordability situation (1.5, 1.4, 1.4, and 1.3 percent QoQ, respectively). Still, this improvement is not visible in countries such as Portugal and Croatia, where affordability keeps deteriorating relentlessly (2.5 and 2.1 percent QoQ, and 15.4 and 8.8 percent YoY in each case). For Spain, affordability remained the same as last quarter after a non-stop worsening of conditions for various quarters, as reported in the IHO. This becomes clear when looking at the YoY change reported at 8.8 percent. Lastly, the U.S. property affordability improved by 0.6 percent QoQ or 1.1 percent YoY and for the U.K.,1 percent QoQ (0.6 percent YoY).
+
+
+#### Real rents cool down from high levels
+
+Quarterly nominal rents rose for all countries in our pool. However, as in the case of property prices, once we adjust for inflation, real rents cooled down for most countries with South Korea, Finland, and South Africa hitting the -1 percent mark. A notable exception is Slovenia, which recorded the second highest historical rent increase since the 2000s (7.2 percent QoQ). This is partly explained by a statistical change on how rents are now calculated. For Spain, the U.K., and the U.S. rents rose in nominal terms, but after adjusting for inflation, that increase is only still visible in the U.K. (0.5 percent QoQ). For the other two countries real rents remained unaltered for Spain and dropped by 0.2 percent QoQ for the U.S. Still, as rents have been on the rise lately, the nominal rent levels are high, posing continued affordability stress on tenants.
+
+
+### Selected Housing Policies and Regulations
+
+**European Union:** the European Commission introduced key measures to tackle housing challenges, headlined by the Affordable Housing Act Package, which establishes the first common framework across Member States to empower local authorities to address housing stress, regulate short-term rentals, and accelerate affordable housing development. Complementing this official legislative package, the European Commission registered the "Right to Housing! Now and Forever" European Citizens' Initiative, launching a formal process for citizens to petition the EU for binding short-term rental limits, vacant building conversions, and an EU Housing Agency.
+
+**Spain:** The Spanish government introduced a policy that establishes sweeping emergency market regulations, including a 2 percent annual cap on rent updates through 2027 (and complete rent freezes for homes priced above official reference indices), stricter rules and rent caps on room and seasonal leases, an eviction freeze for vulnerable households extended through 2030, tax incentives for affordable landlords, and the creation of the zero-interest "Tu Casa" loan program for first-time buyers. Meanwhile, further regulations focus on long-term residential stability by amending Article 10 of the Urban Leases Act (LAU) to mandate automatic, multi-year extensions for ordinary lease agreements after the initial 5- to 7-year statutory period. Taken together, the overarching intention of these dual policies is to curb speculative price surges, eliminate regulatory loopholes like short-term conversion fraud, and prioritize long-term housing stability and affordability for middle- and lower-income residents in an increasingly constrained and expensive Spanish market.
+
+**Portugal:** The government in Portugal approved the Rental Market Reform, which introduces key adjustments to Portugal’s urban leasing framework by phasing out the statutory 2 percent cap on initial prices for new tenancy agreements, lowering the threshold for non-payment eviction proceedings from 3 months to 2, and permitting higher advance rent requirements. For the housing sector, removing initial price caps reduces market distortion, which may lead to short-term price adjustments in supply-constrained areas as contract terms adjust to prevailing market clearing levels. Over a longer horizon, lowering transaction friction and default risk could marginalize risk premiums for property owners, potentially influencing capital allocation toward long-term residential stock and altering supply responsiveness in the rental sector.
+
+**Croatia:** The Croatian government introduced a national annual real estate tax replacing the prior vacation home tax. The policy imposes an annual tax ranging between 0.60€ and 8.00€ per square meter of usable living area on residential properties, with individual municipalities setting their exact local rates. Primary residences and properties leased under registered long-term rental agreements (lasting at least 10 months annually) are completely exempt from the tax. Consequently, the tax specifically targets vacant homes, second homes, and short-term tourist rentals. By increasing annual holding costs for underutilized stock, this tax creates a strong financial disincentive for speculative buy-to-hold practices and inactive ownership. Over time, this holding cost pressure is likely to encourage property owners to convert short-term tourist apartments into long-term residential leases to secure the tax exemption, thereby expanding primary rental inventory and moderating rental prices.
+
+

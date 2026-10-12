@@ -1,6 +1,14 @@
 {
     "reports": [
         {
+            "title": "Global Housing's Double Squeeze: High House Prices Meet Rising Inflation",
+            "quarter": "Q3 2026",
+            "publish_date": "13/10/2026",
+            "description": "Global housing markets are entering a more challenging phase, with households facing a double squeeze from persistently high housing costs and renewed inflationary pressures.",
+            "excerpt": "Global nominal house prices rose 0.7 percent QoQ in the second quarter of 2026, while renewed inflation pushed real house prices down 0.5 percent. Affordability continues to deteriorate sharply in Portugal, Croatia, and Spain, whereas Australia, Israel, France, and Canada saw some improvements. With central banks moving away from rate cuts, tighter financing conditions may weigh on housing demand.",
+            "link": "/reports/2026q3.html"
+        },
+        {
             "title": "Price Growth Persists, Affordability Diverges, Policy Responds",
             "quarter": "Q2 2026",
             "publish_date": "28/07/2026",
