@@ -3,7 +3,7 @@ title: housing-site-int
 type: project
 status: active
 created: 2026-10-27
-updated: 2026-10-29
+updated: 2026-11-04
 sources: []
 scope: housing-observatory
 tags: [project, frontend]
@@ -40,3 +40,6 @@ Serve the folder statically. No build step.
 - `reports/` is empty in this checkout, so the rendered versions are not here.
 
 Related: [[concepts/housing-observatory]], [[conventions]], [[inbox/housing-site-int]].
+
+## Analytics
+GA4 tag `G-ZHNETED6TG` (property "Housing Observatory - GA4"). The ID lives once, in `scripts/set_ga.py` (`GA_ID`); run `python scripts/set_ga.py` to rewrite every page, `--check` to verify. Replaced the dead `UA-129604855-5` tag on 2026-11-04.
