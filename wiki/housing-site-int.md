@@ -17,7 +17,7 @@ Static site of the International Housing Observatory: charts, quarterly reports,
 Part of [[concepts/housing-observatory]]. GitHub: `lancs-macro/int`.
 
 ## Stack
-Plain HTML/CSS/JS with C3 line charts (`assets/js/linechart*.js`). Charts load JSON from the data API ([[projects/housing-api/housing-api]]): `api.housing-observatory.com/visualizations/int/rhpi` and `rhpi_yoy`. The dashboard is embedded from Posit Connect Cloud ([[projects/idash/idash]]).
+Plain HTML/CSS/JS with C3 line charts (`assets/js/linechart*.js`). Charts load JSON from the data API ([[projects/housing-api/housing-api]]): `api.housing-observatory.com/visualizations/int/rhpi` and `rhpi_yoy`. The dashboard is embedded from Railway (`idash-production.up.railway.app`, see [[projects/idash/idash]]).
 
 ## Run and test
 Serve the folder statically. No build step.
